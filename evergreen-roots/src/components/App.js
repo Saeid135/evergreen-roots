@@ -5,6 +5,9 @@ export default function App() {
     return (
         <div>
             <Navbar />
+            <div>
+                Hey Everyone
+            </div>
         </div>
     )
 }

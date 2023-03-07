@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 
 export default function App() {
     return (
-        <div>
-            <Navbar />
+        <div className="container">
             <div>
-                Hey Everyone
+                <Navbar />
             </div>
         </div>
     )

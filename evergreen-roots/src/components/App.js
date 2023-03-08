@@ -1,10 +1,11 @@
-import Navbar from "./Navbar";
+import Home from "./Home";
 
 export default function App() {
     return (
         <div className="container">
             <div>
-                <Navbar />
+                <Home />
+
             </div>
         </div>
     )

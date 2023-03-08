@@ -45,6 +45,48 @@ body {
   background-attachment: fixed;
 }
 
+/* .home-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} */
+
+.home-card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10vh;
+  align-items: flex-start;
+}
+
+.home-card {
+  flex: 0 0 250px;
+  background-color: white;
+  margin: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  transition: all 200ms ease-in-out;
+}
+
+.home-card p {
+  margin: 1em;
+}
+
+.home-card h4 {
+  text-align: center;
+}
+
+.search {
+  /* flex: 0 0 250px; */
+  background-color: white;
+  margin: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  transition: all 200ms ease-in-out;
+  width: 30%;
+}
+
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
 		visibility: visible;

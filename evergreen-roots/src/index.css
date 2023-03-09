@@ -84,7 +84,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
   transition: all 200ms ease-in-out;
-  width: 30%;
+  width: 40%;
+  min-width: 300px;
 }
 
 @media only screen and (max-width: 1024px) {

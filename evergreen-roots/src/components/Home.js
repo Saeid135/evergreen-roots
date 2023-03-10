@@ -14,7 +14,7 @@ export default function Home() {
                             <h4>What is Collabor-Action?</h4>
                             <div className="card-content">
                                 <div>
-                                    <img src={require("../fist-bump.png")}></img>
+                                    <img src={require("../img/fist-bump.png")}></img>
                                 </div>
                                 <div>
                                     <p>Collabor-Action is a search-engine and communication tool designed to help unite Community Based Organizations and Nonprofits with healthcare organization in order to provide the best healthcare services and resources to patients from all communities. Organizations can search one another, in order to help establish good relationships through quality communication through our collaboration request forum to ultimately forge a reliable and supportive system!</p>
@@ -25,7 +25,7 @@ export default function Home() {
                             <h4>Why was Collabor-Action Made?</h4>
                             <div className="card-content">
                                 <div>
-                                    <img src={require("../research.png")}></img>
+                                    <img src={require("../img/research.png")}></img>
                                 </div>
                                 <div>
                                     <p>

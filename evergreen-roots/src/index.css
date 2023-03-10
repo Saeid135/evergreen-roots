@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("/src/background.png");
+	background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("/src/img/background.png");
 	background-size: 100% 100%;
 	background-attachment: fixed;
   }

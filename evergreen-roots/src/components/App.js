@@ -2,15 +2,17 @@ import Connect from "./Connect";
 import Home from "./Home";
 import Reg_Con from "./Reg_Con";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Register from "./Register";
 
 //Comment out the page that you would like to view
 //Once the Routing is done, clicking on links on the page will allow you switch pages
 
 export default function App() {
     return (
-        <Home />
+        // <Home />
         // <Reg_Con />
-        // <Connect />
+        <Connect />
+        // <Register />
     );
 }
 

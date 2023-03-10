@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 
-export default function Connect() {
+export default function Register() {
     return (
         <div className="container">
             <div>

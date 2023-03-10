@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+	background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("/src/background.png");
+	background-size: contain;
+	background-attachment: fixed;
+  }
+
+/* ------------------------------ NAVBAR STYLES ----------------------------------- */
+
 header {
 	display: flex;
 	align-items: center;
@@ -39,17 +47,7 @@ nav {
 	align-items: center;
 }
 
-body {
-  background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("/src/background.png");
-  background-size: contain;
-  background-attachment: fixed;
-}
-
-/* .home-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-} */
+/* ------------------------------ HOME PAGE STYLES ----------------------------------- */
 
 .home-card-container {
   display: flex;
@@ -78,14 +76,41 @@ body {
 }
 
 .search {
-  /* flex: 0 0 250px; */
   background-color: white;
   margin: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
   transition: all 200ms ease-in-out;
-  width: 30%;
+  width: 40%;
+  min-width: 300px;
 }
+
+/* ------------------------------ REGISTER/CONNECT PAGE STYLES ----------------------------------- */
+
+.reg-con-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10vh;
+}
+
+.reg-con-card {
+	flex: 0 0 250px;
+	background-color: white;
+	margin: 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+	transition: all 200ms ease-in-out;
+	cursor: pointer;
+  }
+
+.reg-con-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ------------------------------ MEDIA QUERIES ----------------------------------- */
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
@@ -122,21 +147,3 @@ body {
 		font-size: 1.5rem;
 	}
 }
-
-/* .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  display: flex;
-} */
-
-/* .nav {
-  background-color: white;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  padding: 1rem 1rem;
-} */

@@ -12,12 +12,11 @@ export default function Navbar() {
 
 	return (
 		<header>
-			<h3>Inbox Logo</h3>
+			<h3>Logo</h3>
 			<nav ref={navRef}>
-				<a href="/#">Home</a>
-				<a href="/#">My work</a>
-				<a href="/#">Blog</a>
-				<a href="/#">About me</a>
+				<a href="/#">Inbox</a>
+				<a href="/#">Register/Connect</a>
+				<a href="/#">Account</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

@@ -12,7 +12,14 @@ export default function Home() {
                     <div>
                         <div className="home-card">
                             <h4>What is Collabor-Action?</h4>
-                            <p>Collabor-Action is a search-engine and communication tool designed to help unite Community Based Organizations and Nonprofits with healthcare organization in order to provide the best healthcare services and resources to patients from all communities. Organizations can search one another, in order to help establish good relationships through quality communication through our collaboration request forum to ultimately forge a reliable and supportive system!</p>
+                            <div className="card-content">
+                                <div>
+                                    <img src={require("../logo.png")}></img>
+                                </div>
+                                <div>
+                                    <p>Collabor-Action is a search-engine and communication tool designed to help unite Community Based Organizations and Nonprofits with healthcare organization in order to provide the best healthcare services and resources to patients from all communities. Organizations can search one another, in order to help establish good relationships through quality communication through our collaboration request forum to ultimately forge a reliable and supportive system!</p>
+                                </div>
+                            </div>
                         </div>
                         <div className="home-card">
                             <h4>Why was Collabor-Action Made?</h4>

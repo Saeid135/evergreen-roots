@@ -6,7 +6,7 @@
 
 body {
 	background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("/src/background.png");
-	background-size: contain;
+	background-size: 100% 100%;
 	background-attachment: fixed;
   }
 
@@ -51,11 +51,9 @@ nav {
 
 .home-card-container {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin: 10vh;
-  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .home-card {
@@ -65,6 +63,7 @@ nav {
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
   transition: all 200ms ease-in-out;
+  max-width: 55vw;
 }
 
 .home-card p {
@@ -81,8 +80,19 @@ nav {
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
   transition: all 200ms ease-in-out;
-  width: 40%;
+  width: 20%;
   min-width: 300px;
+  max-height: 23px;
+}
+
+.card-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.home-card img {
+	width: 15vw;
+	margin-top: 22%;
 }
 
 /* ------------------------------ REGISTER/CONNECT PAGE STYLES ----------------------------------- */

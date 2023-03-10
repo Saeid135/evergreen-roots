@@ -21,9 +21,16 @@ header {
 	background-color: white;
 }
 
-nav a {
+nav li {
 	margin: 0 1rem;
 	text-decoration: none;
+	list-style-type: none;
+}
+
+nav li:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	color: lightskyblue;
 }
 
 nav a:hover {
@@ -92,7 +99,12 @@ nav {
 
 .home-card img {
 	width: 15vw;
-	margin-top: 22%;
+	/* margin-top: 22%; */
+}
+
+.reg-con-card img {
+	height: 40vh;
+	width: 20vw;
 }
 
 /* ------------------------------ REGISTER/CONNECT PAGE STYLES ----------------------------------- */

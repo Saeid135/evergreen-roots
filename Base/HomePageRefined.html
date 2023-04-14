@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        </head>
+        <body>
+
+            <!--NEED TO ADD RESPONSIVE NAVBAR FEATURES (HAMBURGER MENU)-->
+            <header>
+                <h3>Logo</h3>
+                <nav ref={navRef}>
+                    <li>
+                        Register/Connect
+                    </li>
+                    <li>
+                        Inbox
+                    </li>
+                    <li>
+                        Account
+                    </li>
+                    <button
+                        class="nav-btn nav-close-btn"
+                        onClick={showNavbar}>
+                        <!-- <FaTimes /> -->
+                    </button>
+                </nav>
+                <button
+                    class="nav-btn"
+                    onClick={showNavbar}>
+                    <!-- <FaBars /> -->
+                </button>
+            </header>
+            
+            <div class="container">
+                <div>
+                    <div class="home-card-container">
+                        <div class="home-search search">
+                            Search...
+                        </div>
+                        <div>
+                            <div class="home-card">
+                                <h4>What is Collabor-Action?</h4>
+                                <div class="card-content">
+                                    <div>
+                                        <img src="../evergreen-roots/src/img/fist-bump.png">
+                                    </div>
+                                    <div>
+                                        <p>Collabor-Action is a search-engine and communication tool designed to help unite Community Based Organizations and Nonprofits with healthcare organization in order to provide the best healthcare services and resources to patients from all communities. Organizations can search one another, in order to help establish good relationships through quality communication through our collaboration request forum to ultimately forge a reliable and supportive system!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-card">
+                                <h4>Why was Collabor-Action Made?</h4>
+                                <div class="card-content">
+                                    <div>
+                                        <img src="../evergreen-roots/src/img/research.png">
+                                    </div>
+                                    <div>
+                                        <p>
+                                            - Our research indicated a lack of reliable communication between community based organizations and healthcare systems
+                                        </p>
+                                        <p>
+                                            - That quality communications primarily occurs when there is already an establish relationship between healthcare systems and CBOs. However, many groups on either side of this relationships have not developed these connections
+                                        </p>
+                                        <p>
+                                            - That there are “never-ending lack of resources,” such as volunteers at healthcare systems that could strive in a positive direction with the help of CBOs
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-card">
+                                <p>If you want to add and register your organization to our database or connect your account to a company and show that you are a employee of a company, please click on the “register” button at the top right of screen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html> 
+
+    <br/>
+    <br/> 
+    
+    <style> * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("../evergreen-roots/src/img/background.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 0 2rem;
+            background-color: white;
+        }
+
+        nav li {
+            margin: 0 1rem;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        nav li:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: lightskyblue;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        header .nav-btn {
+            padding: 5px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            outline: none;
+            visibility: hidden;
+            opacity: 0;
+            font-size: 1.8rem;
+        }
+
+        header div,
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .home-card-container {
+            display: flex;
+            justify-content: flex-start;
+            margin: 10vh;
+            flex-wrap: wrap;
+        }
+
+        .home-card {
+            flex: 0 0 250px;
+            background-color: white;
+            margin: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+            transition: all 200ms ease-in-out;
+            max-width: 55vw;
+        }
+
+        .home-card p {
+            margin: 1em;
+        }
+
+        .home-card h4 {
+            text-align: center;
+        }
+
+        .search {
+            background-color: white;
+            margin: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+            transition: all 200ms ease-in-out;
+            width: 20%;
+            min-width: 300px;
+            max-height: 23px;
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home-card img {
+            width: 15vw;
+            /* margin-top: 22%; */
+        }
+
+    </style>

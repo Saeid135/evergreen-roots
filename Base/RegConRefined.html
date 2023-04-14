@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        </head>
+        <body>
+
+            <!--NEED TO ADD RESPONSIVE NAVBAR FEATURES (HAMBURGER MENU)-->
+            <header>
+                <h3>Logo</h3>
+                <nav ref={navRef}>
+                    <li>
+                        Register/Connect
+                    </li>
+                    <li>
+                        Inbox
+                    </li>
+                    <li>
+                        Account
+                    </li>
+                    <button
+                        class="nav-btn nav-close-btn"
+                        onClick={showNavbar}>
+                        <!-- <FaTimes /> -->
+                    </button>
+                </nav>
+                <button
+                    class="nav-btn"
+                    onClick={showNavbar}>
+                    <!-- <FaBars /> -->
+                </button>
+            </header>
+                        
+            <div class="reg-con-container">
+                <div class="reg-con-card">
+                    <img src="../evergreen-roots/src/img/register.png"></img>
+                    <div>
+                        REGISTER YOUR HEALTHCARE SYSTEM OR CBO
+                    </div>
+                </div>
+                <div class="reg-con-card">
+                    <img src="../evergreen-roots/src/img/connect.png"></img>
+                    <div>
+                        CONNECT TO A HEALTHCARE SYSTEM OR CBO
+                    </div>
+                </div>
+            </div>
+
+        </body>
+    </html> 
+
+    <br/>
+    <br/> 
+    
+    <style> * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("../evergreen-roots/src/img/background.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 0 2rem;
+            background-color: white;
+        }
+
+        nav li {
+            margin: 0 1rem;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        nav li:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: lightskyblue;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        header .nav-btn {
+            padding: 5px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            outline: none;
+            visibility: hidden;
+            opacity: 0;
+            font-size: 1.8rem;
+        }
+
+        header div,
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .reg-con-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 10vh;
+        }
+
+        .reg-con-card {
+            flex: 0 0 250px;
+            background-color: white;
+            margin: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+        }
+
+        .reg-con-card:hover {
+            transform: translateY(-1rem);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.4);
+        }
+
+    </style>

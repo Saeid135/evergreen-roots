@@ -1,0 +1,540 @@
+<html>
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&amp;display=swap" rel="stylesheet">
+    <!-- <link href="./css/main.css" rel="stylesheet"> -->
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="v385_280">
+        <div class="v385_297">
+            <div class="v385_298"></div>
+            <div class="v385_299"></div>
+        </div>
+        <div class="v385_312">
+            <div class="v385_313"></div>
+            <div class="v385_314">
+                <span class="v385_317">About/Details about the Company </span>
+                <div class="v385_315"></div>
+                <textarea class="v385_316" type="text" id="about" name="about" placeholder="Type Here..." rows="7"></textarea>
+            </div>
+            <div class="v385_318">
+                <span class="v385_321">Name of your group?</span>
+                <div class="v385_319"></div>
+                <input class="v385_320" type="text" id="group" name="group" placeholder="Type Here...">
+            </div>
+            <div class="v385_322">
+                <span class="v385_325">Address of the Building</span>
+                <div class="v385_323"></div>
+                <input class="v385_324" type="text" id="address" name="address" placeholder="Type Here...">            
+            </div>
+            <div class="v385_326">
+                <span class="v385_329">Phone Number of the Company</span>
+                <div class="v385_327"></div>
+                <input class="v385_328" type="text" id="phone" name="phone" placeholder="Type Here...">            
+            </div>
+            <div class="v385_330">
+                <span class="v385_333">Email Address of the Company</span>
+                <div class="v385_331"></div>
+                <input class="v385_332" type="text" id="email" name="email" placeholder="Type Here...">
+            </div>
+            <span class="v385_334">Are you apart of a community based organization (CBO) or healthcare
+                organization?</span>
+            <div class="v385_335"><span class="v385_336">Community Based Organization (CBO)</span></div>
+            <div class="v385_337"></div>
+            <div class="v385_338"></div>
+            <div class="v423_559"></div><span class="v385_339">Register</span>
+            <input class="v385_340" type="radio" id="cbo" name="health_cbo" value="CBO">
+        </div>
+        <div class="v385_349">
+            <span class="v385_350">Healthcare Organization</span>
+            <input class="v385_351" type="radio" id="health" name="health_cbo" value="Health">
+        </div>
+    </div>
+</body>
+</html>
+
+<br><br>
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    font-size: 14px;
+    }
+    .v385_280 {
+    width: 100%;
+    height: 782px;
+    background: url(../evergreen-roots/src/img/background.png);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    }
+    .v385_297 {
+    width: 100%;
+    height: 67px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    }
+    .v385_298 {
+    width: 44px;
+    height: 44px;
+    background: url(../evergreen-roots/src/img/profile-user.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 11px;
+    left: 1210px;
+    overflow: hidden;
+    }
+    .v385_299 {
+    width: 269px;
+    height: 58px;
+    background: url(../evergreen-roots/src/img/logo-removebg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 3px;
+    left: 489px;
+    overflow: hidden;
+    }
+    .v385_312 {
+    width: 446px;
+    height: 562px;
+    background: url("../images/v385_312.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 91px;
+    left: 401px;
+    overflow: hidden;
+    }
+    .v385_313 {
+    width: 446px;
+    height: 562px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    }
+    .v385_314 {
+    width: 399px;
+    height: 140px;
+    background: url("../images/v385_314.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 365px;
+    left: 23px;
+    overflow: hidden;
+    }
+    .v385_315 {
+    width: 399px;
+    height: 121px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 19px;
+    left: 0px;
+    border: 2px solid rgba(46,167,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    }
+    .v385_316 {
+    width: 384px;
+    height: 109px;
+    color: rgba(59,71,79,1);
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    outline: none;
+    border: 0;
+    }
+    .v385_317 {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_318 {
+    width: 399px;
+    height: 44px;
+    background: url("../images/v385_318.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 145px;
+    left: 24px;
+    overflow: hidden;
+    }
+    .v385_319 {
+    width: 399px;
+    height: 26px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    border: 2px solid rgba(46,167,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    }
+    .v385_320 {
+    width: 200px;
+    color: rgba(59,71,79,1);
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    outline: none;
+    border: 0;
+    }
+    .v385_321 {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_322 {
+    width: 399px;
+    height: 44px;
+    background: url("../images/v385_322.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 200px;
+    left: 24px;
+    overflow: hidden;
+    }
+    .v385_323 {
+    width: 399px;
+    height: 26px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    border: 2px solid rgba(46,167,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    }
+    .v385_324 {
+    width: 200px;
+    color: rgba(59,71,79,1);
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    outline: none;
+    border: 0;
+    }
+    .v385_325 {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_326 {
+    width: 399px;
+    height: 44px;
+    background: url("../images/v385_326.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 255px;
+    left: 24px;
+    overflow: hidden;
+    }
+    .v385_327 {
+    width: 399px;
+    height: 26px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    border: 2px solid rgba(46,167,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    }
+    .v385_328 {
+    width: 200px;
+    color: rgba(59,71,79,1);
+    position: absolute;
+    top: 24px;
+    left: 10px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    outline: none;
+    border: 0;
+    }
+    .v385_329 {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_330 {
+    width: 399px;
+    height: 44px;
+    background: url("../images/v385_330.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 310px;
+    left: 24px;
+    overflow: hidden;
+    }
+    .v385_331 {
+    width: 399px;
+    height: 26px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    border: 2px solid rgba(46,167,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    }
+    .v385_332 {
+    width: 200px;
+    color: rgba(59,71,79,1);
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    outline: none;
+    border: 0;
+    }
+    .v385_333 {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_334 {
+    width: 399px;
+    color: rgba(59,71,79,1);
+    position: absolute;
+    top: 70px;
+    left: 24px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_335 {
+    width: 200px;
+    height: 11px;
+    background: url("../images/v385_335.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 106px;
+    left: 37px;
+    overflow: visible;
+    }
+    .v385_336 {
+    width: 200px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_337 {
+    width: 45px;
+    height: 46px;
+    background: url(../evergreen-roots/src/img/edit-1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    left: 205px;
+    overflow: hidden;
+    }
+    .v385_338 {
+    width: 123px;
+    height: 31px;
+    background: rgba(46,167,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 514px;
+    left: 300px;
+    border: 3px solid rgba(46,167,255,1);
+    }
+    .v423_559 {
+    width: 123px;
+    height: 31px;
+    background: rgba(46,167,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 514px;
+    left: 300px;
+    border: 3px solid rgba(46,167,255,1);
+    }
+    .v385_339 {
+    width: 63px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 520px;
+    left: 330px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_340 {
+    width: 11px;
+    height: 10px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 108px;
+    left: 21px;
+    border-radius: 50%;
+    }
+    .v385_349 {
+    width: 154px;
+    height: 13px;
+    background: url("../images/v385_349.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 197px;
+    left: 662px;
+    overflow: visible;
+    }
+    .v385_350 {
+    width: 141px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 0px;
+    left: 13px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .v385_351 {
+    width: 11px;
+    height: 10px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    border-radius: 50%;
+    }
+</style>
+
+

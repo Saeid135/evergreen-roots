@@ -3,32 +3,39 @@ _Informatics Capstone Project 2023 | University of Washington Information School
 
 ## Team Members
 
-- Anas Azeemi 
+- Anas Azeemi
 - Vincent Chen
-- Christopher Kim 
-- Saeid Mohamed 
-- Jonathan Trinh 
+- Christopher Kim
+- Saeid Mohamed
+- Jonathan Trinh
 
-## Project Overview 
+## Project Overview
 ...
 
-## Presentation Deck 
+## Presentation Deck
 ...
 
 
-## Understanding Our Code 
+## Understanding Our Code
 ...
 
-## License 
+## License
 
 ## Backend
+- Mainly utilizing Node.js in order to keep track of/maintain and manipulate data and information
 
-## Frontend 
 
-## Nice-To-Have Features 
-... features we didn't get a chance to develop that would improve platform ... 
+## Frontend
+Run Locally
+- Requirements:
+  Have a working, up to date browser to run the application
 
-## Future iSchool Capstone Team 
+
+
+## Nice-To-Have Features
+... features we didn't get a chance to develop that would improve platform ...
+
+## Future iSchool Capstone Team
 ... please reach out to ...
 
 

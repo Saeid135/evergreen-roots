@@ -33,26 +33,31 @@ ___
 ___
 
 ## Understanding Our Code
-...
 
-## License
+### License
 
-## Backend
+### Backend
 - Mainly utilizing Node.js in order to keep track of/maintain and manipulate data and information
 
-
-## Frontend
+### Frontend
 Run Locally
 - Requirements:
   Have a working, up to date browser to run the application
 
-
+___
 
 ## Nice-To-Have Features
-... features we didn't get a chance to develop that would improve platform ...
+Features we didn't get a chance to develop that we believe would improve the platform:
+- Survey to assess the capabilities, strengths, weaknesses of CBOs and healthcare systems
+- Proximity map of CBOs and healthcare systems (or just list how many miles away they are)
+- Ability to share possible collaborative events that are taking place
+- Allowing each organization to choose up to 3-5 tags to describle themselves. They can be sorted by these tags. 
+
+___
 
 ## Future iSchool Capstone Team
-... please reach out to ...
+If you're a future iSchool Capstone team that is interested in continuing this project, **please reach out** to ... via email at ...
+
 
 
 

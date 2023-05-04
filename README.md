@@ -58,7 +58,7 @@ Features we didn't get a chance to develop that we believe would improve the pla
 ___
 
 ## Future iSchool Capstone Team
-If you're a future iSchool Capstone team that is interested in continuing this project, **please reach out** to ... via email at ...
+If you're a future iSchool Capstone team that is interested in continuing this project, **please reach out** to Anas Azeemi via email at aazeemi@uw.edu
 
 
 

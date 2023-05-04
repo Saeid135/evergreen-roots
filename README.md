@@ -40,9 +40,11 @@ ___
 - Mainly utilizing Node.js in order to keep track of/maintain and manipulate data and information
 
 ### Frontend
-Run Locally
-- Requirements:
-  Have a working, up to date browser to run the application
+- The design was based off of the Figma prototype (linked above)
+- HTML and CSS were used without any external CSS libraries
+- Media Queries for phone screens is included, including a changing Navigation Bar
+- Connected to the Backend through Javascript
+- Currently, some initial drafts of the pages (which aren't used in the final product) are included in the folders, primarily to allow easy transfer of code (in case a reversion to previous styles was decided). 
 
 ___
 

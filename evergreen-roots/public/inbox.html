@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        </head>
+        <body>
+            <!--NEED TO ADD RESPONSIVE NAVBAR FEATURES (HAMBURGER MENU)-->
+            <header>
+                <h3>Logo</h3>
+                <nav ref={navRef}>
+                    <li>
+                        <a href="./selectconnect.html">Register/Connect</a>
+                    </li>
+                    <li>
+                        Inbox
+                    </li>
+                    <li>
+                        Account
+                    </li>
+                    <button
+                        class="nav-btn nav-close-btn"
+                        onClick={showNavbar}>
+                        <!-- <FaTimes /> -->
+                    </button>
+                </nav>
+                <button
+                    class="nav-btn"
+                    onClick={showNavbar}>
+                    <!-- <FaBars /> -->
+                </button>
+            </header>
+            
+            <div class="container">
+                <div class="message-list">
+                    Here go the list of messages that the user was sent
+                </div>
+                <div class="message-view">
+                    <div class="message-card">
+                        <div class="message-read">
+                            Here goes the actual message itself
+                        </div>
+                        <div class="message-recipients">
+                            Here goes the recipients of the message
+                            <button>Create request response form</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </body>
+    </html> 
+
+    <br/>
+    <br/> 
+    
+    <style> * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 0 2rem;
+            background-color: white;
+        }
+
+        nav li {
+            margin: 0 1rem;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        nav li:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: lightskyblue;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        header .nav-btn {
+            padding: 5px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            outline: none;
+            visibility: hidden;
+            opacity: 0;
+            font-size: 1.8rem;
+        }
+
+        header div,
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        .message-list {
+            width: 30vw;
+            background-color: white;
+        }
+
+        .message-view {
+            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            min-width: 70vw;
+            min-height: 100%;
+        }
+
+        .message-card {
+            display: flex;
+            flex-direction: row;
+            height: 80%;
+            margin-top: 8%;
+            margin-left: 8%;
+            margin-right: 8%;
+            border-radius: 20px;
+        }
+
+        .message-read {
+            width: 70%;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .message-recipients {
+            min-width: 30%;
+            background-color: #2FA8FF;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .message-recipients button {
+            position: absolute;
+            bottom: 0;
+        }
+
+    </style>

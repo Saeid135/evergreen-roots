@@ -37,11 +37,20 @@
                 <div class="message-view">
                     <div class="message-card">
                         <div class="message-read">
-                            Here goes the actual message itself
+                            <div class="title">
+                                <b>Title</b>
+                            </div>
+                            <div class="message">
+                                Here goes the actual message itself
+                            </div>
                         </div>
                         <div class="message-recipients">
-                            Here goes the recipients of the message
-                            <button>Create request response form</button>
+                            <div>
+                                Here goes the recipients of the message
+                            </div>
+                            <div class="button">
+                                <button>Create request response form</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,12 +62,12 @@
     <br/>
     <br/> 
     
-    <style> * {
+    <style> 
+    * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
 
         header {
             display: flex;
@@ -79,10 +88,6 @@
             cursor: pointer;
             text-decoration: underline;
             color: lightskyblue;
-        }
-
-        nav a:hover {
-            color: aqua;
         }
 
         header .nav-btn {
@@ -106,50 +111,68 @@
 
         .container {
             display: flex;
-            flex-direction: row;
-            min-height: 100vh;
+        }
+
+        .message-list, .message-view {
+            height: 100vh;
+            width: 100%;
         }
 
         .message-list {
-            width: 30vw;
             background-color: white;
+            width: 35%;
         }
 
         .message-view {
+            background-color: #2FA8FF;
             background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
             background-size: 100% 100%;
             background-attachment: fixed;
-            min-width: 70vw;
-            min-height: 100%;
         }
 
         .message-card {
             display: flex;
             flex-direction: row;
-            height: 80%;
-            margin-top: 8%;
-            margin-left: 8%;
-            margin-right: 8%;
+            height: 70%;
+            width: 80%;
+            margin-left: 7vw;
+            margin-top: 15vh;
             border-radius: 20px;
+        }
+
+        .message-read, .message-recipients {
+            height: 100%;
         }
 
         .message-read {
             width: 70%;
             background-color: white;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        /* .title {
+            
+        } */
+
+        .message {
+            border-radius: 2px;
+            border-color: #2FA8FF;
         }
 
         .message-recipients {
-            min-width: 30%;
+            width: 30%;
             background-color: #2FA8FF;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
-        .message-recipients button {
-            position: absolute;
-            bottom: 0;
+        .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 150%;
+            cursor: pointer;
         }
 
     </style>

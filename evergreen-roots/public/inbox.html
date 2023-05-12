@@ -38,15 +38,15 @@
                     <div class="message-card">
                         <div class="message-read">
                             <div class="title">
-                                <b>Title</b>
+                                <p>Use the BackEnd information to display the title <b>"INSERT NAME"'s Request Message To You and Other Employees of "INSERT ORGANIZATION NAME"</b></p>
                             </div>
                             <div class="message">
-                                Here goes the actual message itself
+                                <p>Here goes the actual message itself</p>
                             </div>
                         </div>
                         <div class="message-recipients">
                             <div>
-                                Here goes the recipients of the message
+                                <p>Those who recieve this request message</p>
                             </div>
                             <div class="button">
                                 <button>Create request response form</button>
@@ -107,7 +107,12 @@
             align-items: center;
         }
 
-
+        body {
+            background-color: #2FA8FF;
+            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
 
         .container {
             display: flex;
@@ -121,13 +126,6 @@
         .message-list {
             background-color: white;
             width: 35%;
-        }
-
-        .message-view {
-            background-color: #2FA8FF;
-            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
-            background-size: 100% 100%;
-            background-attachment: fixed;
         }
 
         .message-card {
@@ -151,13 +149,19 @@
             border-bottom-left-radius: 20px;
         }
 
-        /* .title {
-            
-        } */
-
         .message {
-            border-radius: 2px;
-            border-color: #2FA8FF;
+            display: flex;
+            height: 70%;
+            width: 90%;
+            margin-left: 2vw;
+            margin-top: 3vh;
+            border: 3px solid #2FA8FF;
+            border-radius: 20px;
+        }
+
+        .message-view p {
+            padding-top: 8px;
+            padding-left: 8px;
         }
 
         .message-recipients {

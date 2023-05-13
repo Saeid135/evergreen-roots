@@ -11,49 +11,51 @@
 
 
 <body>
-    <div class="v385_280">
-        <div class="v385_297">
-            <div class="v385_298"></div>
-            <div class="v385_299"></div>
+    <div class="whole_page">
+        <div class="Navbar">
+            <div class="user-image"></div>
+            <div class="logo"></div>
         </div>
-        <div class="v385_312">
-            <div class="v385_313"></div>
-            <div class="v385_314">
-                <span class="v385_317">About/Details about the Company </span>
-                <div class="v385_315"></div>
-                <textarea class="v385_316" type="text" id="about" name="about" placeholder="Type Here..." rows="7"></textarea>
+        <div class="form-box">
+            <div class="form"></div>
+            <div class="about">
+                <span class="about-title">About/Details about the Company </span>
+                <div class="about-textbox"></div>
+                <textarea class="about-text" type="text" id="about" name="about" placeholder="Type Here..." rows="7"></textarea>
             </div>
-            <div class="v385_318">
-                <span class="v385_321">Name of your group?</span>
-                <div class="v385_319"></div>
-                <input class="v385_320" type="text" id="group" name="group" placeholder="Type Here...">
+            <div class="name">
+                <span class="name-title">Name of your group?</span>
+                <div class="name-textbox"></div>
+                <input class="name-text" type="text" id="group" name="group" placeholder="Type Here...">
             </div>
-            <div class="v385_322">
-                <span class="v385_325">Address of the Building</span>
-                <div class="v385_323"></div>
-                <input class="v385_324" type="text" id="address" name="address" placeholder="Type Here...">            
+            <div class="address">
+                <span class="address-title">Address of the Building</span>
+                <div class="address-textbox"></div>
+                <input class="address-text" type="text" id="address" name="address" placeholder="Type Here...">            
             </div>
-            <div class="v385_326">
-                <span class="v385_329">Phone Number of the Company</span>
-                <div class="v385_327"></div>
-                <input class="v385_328" type="text" id="phone" name="phone" placeholder="Type Here...">            
+            <div class="phone">
+                <span class="phone-title">Phone Number of the Company</span>
+                <div class="phone-textbox"></div>
+                <input class="phone-text" type="text" id="phone" name="phone" placeholder="Type Here...">            
             </div>
-            <div class="v385_330">
-                <span class="v385_333">Email Address of the Company</span>
-                <div class="v385_331"></div>
-                <input class="v385_332" type="text" id="email" name="email" placeholder="Type Here...">
+            <div class="email">
+                <span class="email-title">Email Address of the Company</span>
+                <div class="email-textbox"></div>
+                <input class="email-text" type="text" id="email" name="email" placeholder="Type Here...">
             </div>
-            <span class="v385_334">Are you apart of a community based organization (CBO) or healthcare
+
+            <span class="main-title">Are you apart of a community based organization (CBO) or healthcare
                 organization?</span>
-            <div class="v385_335"><span class="v385_336">Community Based Organization (CBO)</span></div>
-            <div class="v385_337"></div>
-            <div class="v385_338"></div>
-            <button class="v423_559" onClick = "addCompany()"></button><span class="v385_339">Register</span>
-            <input class="v385_340" type="radio" id="cbo" name="health_cbo" value="Community-based Org">
-        </div>
-        <div class="v385_349">
-            <span class="v385_350">Healthcare Organization</span>
-            <input class="v385_351" type="radio" id="health" name="health_cbo" value="Healthcare Org">
+
+            <div class="opt-1-box"><span class="opt-1">Community Based Organization (CBO)</span></div>
+            <input class="opt-1-btn" type="radio" id="cbo" name="health_cbo" value="Community-based Org">
+
+            <div class="opt-2-box"><span class="opt-2">Healthcare Organization</span></div>
+            <input class="opt-2-btn" type="radio" id="health" name="health_cbo" value="Healthcare Org">
+
+            <div class="form-img"></div>
+            <div class="reg-box"></div>
+            <button class="reg-button" onClick = "addCompany()"></button><span class="reg-symbol">Register</span>
         </div>
     </div>
 </body>
@@ -67,19 +69,23 @@
     body {
     font-size: 14px;
     }
-    .v385_280 {
+    .whole_page {
     width: 100%;
-    height: 782px;
-    background: url(./img/background.png);
+    height: 100%;
+    background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
+    background-size: 100% 100%;
+    background-attachment: fixed;    
     opacity: 1;
     position: absolute;
     top: 0px;
     left: 0px;
     overflow: hidden;
     }
-    .v385_297 {
+    .Navbar {
     width: 100%;
-    height: 67px;
+    min-height: 44px;
+    max-height: 70px;
+    height: 12%;
     background: rgba(255,255,255,1);
     opacity: 1;
     position: absolute;
@@ -87,7 +93,7 @@
     left: 0px;
     overflow: hidden;
     }
-    .v385_298 {
+    .user-image {
     width: 44px;
     height: 44px;
     background: url(./img/profile-user.png);
@@ -97,22 +103,23 @@
     opacity: 1;
     position: absolute;
     top: 11px;
-    left: 1210px;
+    left: 90%;
     overflow: hidden;
     }
-    .v385_299 {
-    width: 269px;
-    height: 58px;
+    .logo {
+    width: 20vw;
+    height: 100%;
+    min-width: 190px;
     background: url(./img/logo-removebg.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: absolute;
     top: 3px;
-    left: 489px;
+    margin-left: 37%;
     overflow: hidden;
     }
-    .v385_312 {
+    .form-box {
     width: 446px;
     height: 562px;
     background: url("../images/v385_312.png");
@@ -121,11 +128,12 @@
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 91px;
-    left: 401px;
+    margin-top: 2%;
+    top: 10%;
+    left: 30%;
     overflow: hidden;
     }
-    .v385_313 {
+    .form {
     width: 446px;
     height: 562px;
     background: rgba(255,255,255,1);
@@ -139,7 +147,7 @@
     border-bottom-right-radius: 20px;
     overflow: hidden;
     }
-    .v385_314 {
+    .about {
     width: 399px;
     height: 140px;
     background: url("../images/v385_314.png");
@@ -152,7 +160,19 @@
     left: 23px;
     overflow: hidden;
     }
-    .v385_315 {
+    .about-title {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .about-textbox {
     width: 399px;
     height: 121px;
     background: rgba(255,255,255,1);
@@ -167,7 +187,7 @@
     border-bottom-right-radius: 10px;
     overflow: hidden;
     }
-    .v385_316 {
+    .about-text {
     width: 384px;
     height: 109px;
     color: rgba(59,71,79,1);
@@ -182,22 +202,10 @@
     outline: none;
     border: 0;
     }
-    .v385_317 {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    }
-    .v385_318 {
+    .name {
     width: 399px;
     height: 44px;
-    background: url("../images/v385_318.png");
+    background: url("../images/name.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -207,7 +215,19 @@
     left: 24px;
     overflow: hidden;
     }
-    .v385_319 {
+    .name-title {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .name-textbox {
     width: 399px;
     height: 26px;
     background: rgba(255,255,255,1);
@@ -222,7 +242,7 @@
     border-bottom-right-radius: 10px;
     overflow: hidden;
     }
-    .v385_320 {
+    .name-text {
     width: 200px;
     color: rgba(59,71,79,1);
     position: absolute;
@@ -236,22 +256,10 @@
     outline: none;
     border: 0;
     }
-    .v385_321 {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    }
-    .v385_322 {
+    .address {
     width: 399px;
     height: 44px;
-    background: url("../images/v385_322.png");
+    background: url("../images/address.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -261,7 +269,19 @@
     left: 24px;
     overflow: hidden;
     }
-    .v385_323 {
+    .address-title {
+    width: 377px;
+    color: rgba(59,71,79,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .address-textbox {
     width: 399px;
     height: 26px;
     background: rgba(255,255,255,1);
@@ -276,7 +296,7 @@
     border-bottom-right-radius: 10px;
     overflow: hidden;
     }
-    .v385_324 {
+    .address-text {
     width: 200px;
     color: rgba(59,71,79,1);
     position: absolute;
@@ -290,7 +310,20 @@
     outline: none;
     border: 0;
     }
-    .v385_325 {
+    .phone {
+    width: 399px;
+    height: 44px;
+    background: url("../images/phone.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 255px;
+    left: 24px;
+    overflow: hidden;
+    }
+    .phone-title {
     width: 377px;
     color: rgba(59,71,79,1);
     position: relative;
@@ -302,20 +335,7 @@
     opacity: 1;
     text-align: left;
     }
-    .v385_326 {
-    width: 399px;
-    height: 44px;
-    background: url("../images/v385_326.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 255px;
-    left: 24px;
-    overflow: hidden;
-    }
-    .v385_327 {
+    .phone-textbox {
     width: 399px;
     height: 26px;
     background: rgba(255,255,255,1);
@@ -330,7 +350,7 @@
     border-bottom-right-radius: 10px;
     overflow: hidden;
     }
-    .v385_328 {
+    .phone-text {
     width: 200px;
     color: rgba(59,71,79,1);
     position: absolute;
@@ -344,7 +364,20 @@
     outline: none;
     border: 0;
     }
-    .v385_329 {
+    .email {
+    width: 399px;
+    height: 44px;
+    background: url("../images/email.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 310px;
+    left: 24px;
+    overflow: hidden;
+    }
+    .email-title {
     width: 377px;
     color: rgba(59,71,79,1);
     position: relative;
@@ -356,20 +389,7 @@
     opacity: 1;
     text-align: left;
     }
-    .v385_330 {
-    width: 399px;
-    height: 44px;
-    background: url("../images/v385_330.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 310px;
-    left: 24px;
-    overflow: hidden;
-    }
-    .v385_331 {
+    .email-textbox {
     width: 399px;
     height: 26px;
     background: rgba(255,255,255,1);
@@ -384,7 +404,7 @@
     border-bottom-right-radius: 10px;
     overflow: hidden;
     }
-    .v385_332 {
+    .email-text {
     width: 200px;
     color: rgba(59,71,79,1);
     position: absolute;
@@ -398,19 +418,7 @@
     outline: none;
     border: 0;
     }
-    .v385_333 {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    }
-    .v385_334 {
+    .main-title {
     width: 399px;
     color: rgba(59,71,79,1);
     position: absolute;
@@ -422,32 +430,7 @@
     opacity: 1;
     text-align: left;
     }
-    .v385_335 {
-    width: 200px;
-    height: 11px;
-    background: url("../images/v385_335.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 106px;
-    left: 37px;
-    overflow: visible;
-    }
-    .v385_336 {
-    width: 200px;
-    color: rgba(0,0,0,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    }
-    .v385_337 {
+    .form-img {
     width: 45px;
     height: 46px;
     background: url(./img/edit-1.png);
@@ -460,7 +443,7 @@
     left: 205px;
     overflow: hidden;
     }
-    .v385_338 {
+    .reg-box {
     width: 123px;
     height: 31px;
     background: rgba(46,167,255,1);
@@ -470,7 +453,7 @@
     left: 300px;
     border: 3px solid rgba(46,167,255,1);
     }
-    .v423_559 {
+    .reg-button {
     width: 123px;
     height: 31px;
     background: rgba(46,167,255,1);
@@ -480,7 +463,7 @@
     left: 300px;
     border: 3px solid rgba(46,167,255,1);
     }
-    .v385_339 {
+    .reg-symbol {
     width: 63px;
     color: rgba(255,255,255,1);
     position: absolute;
@@ -492,7 +475,32 @@
     opacity: 1;
     text-align: left;
     }
-    .v385_340 {
+    .opt-1-box {
+    width: 200px;
+    height: 11px;
+    background: url("../images/opt-1-box.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 106px;
+    left: 37px;
+    overflow: visible;
+    }
+    .opt-1 {
+    width: 200px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .opt-1-btn {
     width: 11px;
     height: 10px;
     background: rgba(255,255,255,1);
@@ -502,20 +510,20 @@
     left: 21px;
     border-radius: 50%;
     }
-    .v385_349 {
+    .opt-2-box {
     width: 154px;
     height: 13px;
-    background: url("../images/v385_349.png");
+    background: url("../images/opt-1-box.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 197px;
-    left: 662px;
+    top: 108px;
+    left: 260px;
     overflow: visible;
     }
-    .v385_350 {
+    .opt-2 {
     width: 141px;
     color: rgba(0,0,0,1);
     position: absolute;
@@ -527,14 +535,14 @@
     opacity: 1;
     text-align: left;
     }
-    .v385_351 {
+    .opt-2-btn {
     width: 11px;
     height: 10px;
     background: rgba(255,255,255,1);
     opacity: 1;
     position: absolute;
-    top: 2px;
-    left: -3px;
+    top: 108px;
+    left: 255px;
     border-radius: 50%;
     }
 </style>

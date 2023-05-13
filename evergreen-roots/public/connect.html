@@ -4,12 +4,12 @@
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
   </head>
 <body>
-  <div class="v89_39">
-    <div class="v385_297">
-      <div class="v385_298"></div>
-      <div class="v385_299"></div>
+  <div class="whole-page">
+    <div class="navbar">
+      <div class="user-image"></div>
+      <div class="logo"></div>
     </div>
-    <div class="v1_767">
+    <div class="form-box">
       <span class="v1_770">Name of your group?</span>
       <div class="v1_768"></div>
       <input class="v1_769" type="text" id="connect_group" name="connect_group" placeholder="Type Here...">
@@ -38,20 +38,23 @@
 body {
   font-size: 14px;
 }
-.v89_39 {
+.whole-page {
   width: 100%;
-  height: 1003px;
-  background: rgba(46,167,255,1);
-  background: url(./img/background.png);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+    height: 100%;
+    background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
+    background-size: 100% 100%;
+    background-attachment: fixed;    
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
 }
-.v385_297 {
-    width: 100%;
-    height: 67px;
+.navbar {
+  width: 100%;
+    min-height: 44px;
+    max-height: 70px;
+    height: 12%;
     background: rgba(255,255,255,1);
     opacity: 1;
     position: absolute;
@@ -59,8 +62,8 @@ body {
     left: 0px;
     overflow: hidden;
     }
-    .v385_298 {
-    width: 44px;
+    .user-image {
+      width: 44px;
     height: 44px;
     background: url(./img/profile-user.png);
     background-repeat: no-repeat;
@@ -69,35 +72,33 @@ body {
     opacity: 1;
     position: absolute;
     top: 11px;
-    left: 1210px;
+    left: 93%;
     overflow: hidden;
     }
-    .v385_299 {
-    width: 269px;
-    height: 58px;
+    .logo {
+      width: 20vw;
+    height: 100%;
+    min-width: 190px;
     background: url(./img/logo-removebg.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: absolute;
     top: 3px;
-    left: 489px;
+    margin-left: 37%;
     overflow: hidden;
     }
-.v1_767 {
-  width: 611px;
-  height: 421px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 154px;
-  left: 311px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-}
+  .form-box {
+    width: 611px;
+    height: 421px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 .v1_768 {
   width: 546px;
   height: 36px;

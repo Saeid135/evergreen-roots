@@ -6,14 +6,15 @@
     <!-- <link href="./css/main.css" rel="stylesheet"> -->
     <script src="javascripts/utils.js"></script>
     <script src="javascripts/register.js"></script>
+    <script src="javascripts/identity.js"></script>
     <title>Document</title>
 </head>
 
 
-<body>
+<body onload="init()">
     <div class="whole_page">
         <div class="navbar">
-            <div class="user-image"></div>
+            <div id="identity_div">loading...</div>
             <div class="logo"></div>
         </div>
         <div class="form-box">
@@ -544,6 +545,36 @@
     top: 108px;
     left: 255px;
     border-radius: 50%;
+    }
+    .user-p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: absolute;
+    left: 87.5%;
+    top: 10
+    }
+    .user-k {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: absolute;
+    left: 86%;
+    top: 10
+    }
+    .user-q {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: absolute;
+    left: 86%;
+    top: 40
     }
 </style>
 

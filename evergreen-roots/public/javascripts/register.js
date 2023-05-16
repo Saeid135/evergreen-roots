@@ -1,3 +1,7 @@
+async function init(){
+    await loadIdentity();
+}
+
 async function addCompany(){
     let type = document.querySelector('input[name="health_cbo"]:checked').value;
     let name = document.getElementById("group").value

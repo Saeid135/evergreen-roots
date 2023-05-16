@@ -1,184 +1,392 @@
-<!DOCTYPE html>
-    <html>
-        <head>
-            <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-        </head>
-        <body>
+<html>
 
-            <!--NEED TO ADD RESPONSIVE NAVBAR FEATURES (HAMBURGER MENU)-->
-            <header>
-                <h3>Logo</h3>
-                <nav ref={navRef}>
-                    <li>
-                        <a href="./selectconnect.html">Register/Connect</a>
-                    </li>
-                    <li>
-                        Inbox
-                    </li>
-                    <li>
-                        Account
-                    </li>
-                    <button
-                        class="nav-btn nav-close-btn"
-                        onClick={showNavbar}>
-                        <!-- <FaTimes /> -->
-                    </button>
-                </nav>
-                <button
-                    class="nav-btn"
-                    onClick={showNavbar}>
-                    <!-- <FaBars /> -->
-                </button>
-            </header>
-            
-            <div class="container">
-                <div>
-                    <div class="home-card-container">
-                        <div class="home-search search">
-                            Search...
-                        </div>
-                        <div>
-                            <div class="home-card">
-                                <h4>What is Collabor-Action?</h4>
-                                <div class="card-content">
-                                    <div>
-                                        <img src="./img/fist-bump.png">
-                                    </div>
-                                    <div>
-                                        <p>Collabor-Action is a search-engine and communication tool designed to help unite Community Based Organizations and Nonprofits with healthcare organization in order to provide the best healthcare services and resources to patients from all communities. Organizations can search one another, in order to help establish good relationships through quality communication through our collaboration request forum to ultimately forge a reliable and supportive system!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="home-card">
-                                <h4>Why was Collabor-Action Made?</h4>
-                                <div class="card-content">
-                                    <div>
-                                        <img src="./img/research.png">
-                                    </div>
-                                    <div>
-                                        <p>
-                                            - Our research indicated a lack of reliable communication between community based organizations and healthcare systems
-                                        </p>
-                                        <p>
-                                            - That quality communications primarily occurs when there is already an establish relationship between healthcare systems and CBOs. However, many groups on either side of this relationships have not developed these connections
-                                        </p>
-                                        <p>
-                                            - That there are “never-ending lack of resources,” such as volunteers at healthcare systems that could strive in a positive direction with the help of CBOs
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="home-card">
-                                <p>If you want to add and register your organization to our database or connect your account to a company and show that you are a employee of a company, please click on the “register” button at the top right of screen</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </body>
-    </html> 
 
-    <br/>
-    <br/> 
-    
-    <style> * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&amp;display=swap" rel="stylesheet">
+    <!-- <link href="./css/main.css" rel="stylesheet"> -->
+    <script src="javascripts/utils.js"></script>
+    <script src="javascripts/register.js"></script>
+    <script src="javascripts/identity.js"></script>
+    <title>Document</title>
+</head>
 
-        body {
-            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
-            background-size: 100% 100%;
-            background-attachment: fixed;
-        }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 80px;
-            padding: 0 2rem;
-            background-color: white;
-        }
+<body onload="init()">
+    <div class="whole_page">
+        <div class="navbar">
+            <div id="identity_div">loading...</div>
+            <div class="logo"></div>
+            <a href="./selectconnect.html">
+                <div class="reg-button"><span class="reg-symbol">Register/Connect</span></div>
+            </a>
+        </div>
+        <div class="v1_40"><span class="v1_41">Collabor-Action is a search-engine and communication tool designed to
+                help unite Community Based Organizations and Nonprofits with healthcare organization in order to
+                provide the best healthcare services and resources to patients from all communities. Organizations
+                can search one another, in order to help establish good relationships through quality communication
+                through our collaboration request forum to ultimately forge a reliable and supportive system!
+            </span><span class="v1_42">What is Collabor-Action?</span></div>
+        <div class="v1_43"></div>
+        <div class="v1_44">
+            <div class="v1_45"></div><span class="v1_46">Why was Collabor-Action Made?</span><span class="v1_47">Our
+                research indicated a lack of reliable communication between community based organizations and
+                healthcare systems
+                That quality communications primarily occurs when there is already an establish relationship between
+                healthcare systems and CBOs. However, many groups on either side of this relationships have not
+                developed these connections
+                That there are “never-ending lack of resources,” such as volunteers at healthcare systems that could
+                strive in a positive direction with the help of CBOs</span>
+        </div>
+        <div class="v1_58"><span class="v1_59">If you want to add and register your organization to our database or
+                connect your account to a company and show that you are a employee of a company, please click on the
+                “register” button at the top right of screen</span>
+            <div class="v1_61"></div>
+            <div class="v1_62"></div>
+        </div>
+        <div class="v1_55"><input class="v1_56" type="text" id="search" name="search" placeholder="Search...">
+            <div class="v1_57"></div>
+        </div>
+    </div>
+</body>
 
-        nav li {
-            margin: 0 1rem;
-            text-decoration: none;
-            list-style-type: none;
-        }
+</html>
 
-        nav li:hover {
-            cursor: pointer;
-            text-decoration: underline;
-            color: lightskyblue;
-        }
+<br><br>
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-        nav a:hover {
-            color: aqua;
-        }
+    body {
+        font-size: 14px;
+    }
 
-        header .nav-btn {
-            padding: 5px;
-            cursor: pointer;
-            background: transparent;
-            border: none;
-            outline: none;
-            visibility: hidden;
-            opacity: 0;
-            font-size: 1.8rem;
-        }
+    .whole_page {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(104, 178, 240, 0.2), rgba(104, 178, 240, 0.2)), url("./img/background.png");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: auto;
+    }
 
-        header div,
-        nav {
-            display: flex;
-            align-items: center;
-        }
+    .navbar {
+        width: 100%;
+        min-height: 44px;
+        max-height: 70px;
+        height: 12%;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
 
-        .home-card-container {
-            display: flex;
-            justify-content: flex-start;
-            margin: 10vh;
-            flex-wrap: wrap;
-        }
+    .reg-symbol {
+        width: 63px;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 4px;
+        left: 11px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 16px;
+        opacity: 1;
+        text-align: left;
+    }
 
-        .home-card {
-            flex: 0 0 250px;
-            background-color: white;
-            margin: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-            transition: all 200ms ease-in-out;
-            max-width: 55vw;
-        }
+    .reg-button {
+        width: 165px;
+        height: 35px;
+        background: rgba(46, 167, 255, 1);
+        opacity: 1;
+        position: absolute;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        top: 19px;
+        left: 920px;
+        border: 3px solid rgba(46, 167, 255, 1);
+    }
 
-        .home-card p {
-            margin: 1em;
-        }
+    .user-image {
+        width: 44px;
+        height: 44px;
+        background: url(./img/profile-user.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 11px;
+        left: 93%;
+        overflow: hidden;
+    }
 
-        .home-card h4 {
-            text-align: center;
-        }
+    .logo {
+        width: 20vw;
+        height: 100%;
+        min-width: 190px;
+        background: url(./img/logo-removebg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 3px;
+        margin-left: 37%;
+        overflow: hidden;
+    }
 
-        .search {
-            background-color: white;
-            margin: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-            transition: all 200ms ease-in-out;
-            width: 20%;
-            min-width: 300px;
-            max-height: 23px;
-        }
+    .v1_40 {
+        width: 734px;
+        height: 224px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 84px;
+        left: 524px;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
 
-        .card-content {
-            display: flex;
-            justify-content: space-between;
-        }
+    .v1_41 {
+        width: 359px;
+        color: url("../images/v1_41.png");
+        position: absolute;
+        top: 51px;
+        left: 300px;
+        font-size: 12px;
+        opacity: 1;
+        text-align: center;
+    }
 
-        .home-card img {
-            width: 15vw;
-            /* margin-top: 22%; */
-        }
+    .v1_42 {
+        width: 173px;
+        color: rgba(46, 167, 255, 1);
+        position: absolute;
+        top: 19px;
+        left: 383px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 14px;
+        opacity: 1;
+        text-align: left;
+    }
 
-    </style>
+    .v1_43 {
+        width: 223px;
+        height: 163px;
+        background: url(./img/fist-bump.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 117px;
+        left: 558px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+    }
+
+    .v1_44 {
+        width: 734px;
+        height: 218px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 355px;
+        left: 524px;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+
+    .v1_45 {
+        width: 144px;
+        height: 143px;
+        background: url(./img/v1_45.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 39px;
+        left: 44px;
+        overflow: hidden;
+    }
+
+    .v1_46 {
+        width: 225px;
+        color: rgba(46, 167, 255, 1);
+        position: absolute;
+        top: 16px;
+        left: 330px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 14px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .v1_47 {
+        width: 435px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 48px;
+        left: 225px;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .v1_58 {
+        width: 734px;
+        height: 107px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 620px;
+        left: 524px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+
+    .v1_59 {
+        width: 466px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 33px;
+        left: 203px;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .v1_61 {
+        width: 73px;
+        height: 73px;
+        background: url(./img/connect.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 17px;
+        left: 116px;
+        overflow: hidden;
+    }
+
+    .v1_62 {
+        width: 63px;
+        height: 63px;
+        background: url(./img/edit-1.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 22px;
+        left: 29px;
+        overflow: hidden;
+    }
+
+    .v1_55 {
+        width: 447px;
+        height: 54px;
+        background: rgba(255, 255, 255, 1);
+        padding: 18px 20px;
+        margin: 278px;
+        opacity: 1;
+        position: absolute;
+        top: -186px;
+        left: -252px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+
+    .v1_56 {
+        width: 311px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 14px;
+        opacity: 1;
+        text-align: left;
+        outline: none;
+        border: 0;
+    }
+
+    .v1_57 {
+        width: 18px;
+        height: 18px;
+        background: url(./img/v1_57.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 18px;
+        left: 409px;
+        overflow: hidden;
+    }
+
+    .user-p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 87.5%;
+        top: 10
+    }
+
+    .user-k {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 86%;
+        top: 10
+    }
+
+    .user-q {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 86%;
+        top: 40
+    }
+</style>

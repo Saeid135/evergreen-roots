@@ -56,8 +56,18 @@
             <div class="v1_62"></div>
         </div>
         <div class="v1_55"><input class="v1_56" type="text" id="search" name="search" placeholder="Search...">
-            <a href="./search.html"><div class="v1_57"></div></a>
+            <div class="v1_57"></div>
         </div>
+        <a href="./search.html">
+            <div class="view_orgs">
+                <p class="p_view">View all</p>
+            </div>
+        </a>
+        <a href="./search.html">
+            <div class="search_orgs">
+                <p class="p_view">Search</p>
+            </div>
+        </a>
     </div>
 </body>
 
@@ -370,6 +380,43 @@
         top: 18px;
         left: 409px;
         overflow: hidden;
+    }
+
+    .view_orgs {
+        width: 144px;
+        height: 41px;
+        background: deepskyblue;
+        opacity: 1;
+        position: absolute;
+        top: 167px;
+        left: 259px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+    }
+
+    .search_orgs {
+        width: 144px;
+        height: 41px;
+        background: deepskyblue;
+        opacity: 1;
+        position: absolute;
+        top: 167px;
+        left: 87px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+    }
+
+    .p_view {
+        text-align: center;
+        font-size: 15px;
+        color: white;
+        font-family: auto;
     }
 
     .user-p {

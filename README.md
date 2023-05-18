@@ -40,6 +40,9 @@ ___
 
 ## Understanding Our Code
 
+### License
+- MIT License
+
 ### Backend
 - Mainly utilizing Node.js in order to keep track of/maintain and manipulate data and information within the back-end
 - Hosting the website as well the usage of databases will be done through MongoDB

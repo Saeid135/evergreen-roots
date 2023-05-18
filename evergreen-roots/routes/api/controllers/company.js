@@ -59,4 +59,31 @@ router.get('/', async function (req, res) {
     }
 })
 
+router.get('/search', async function (req, res, next) {
+    try {
+        let searchName = req.query.name
+        let findName = await req.models.Company.find({ name: searchName })
+        let companyJson = []
+        let companyData = findName.map(async company => {
+            let name = company.name
+            let address = company.address
+            let number = company.number
+            let email = company.email
+            let about = company.about
+            let jsonGroup = {
+                "name": "" + name,
+                "address": "" + address,
+                "number": number,
+                "email": "" + email,
+                "about": "" + about
+            }
+            companyJson.push(jsonGroup)
+        })
+        res.send(companyJson)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ "status": "error", "error": error })
+    }
+});
+
 export default router;

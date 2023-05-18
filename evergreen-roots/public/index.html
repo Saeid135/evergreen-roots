@@ -20,54 +20,63 @@
                 <div class="reg-button"><span class="reg-symbol">Register/Connect</span></div>
             </a>
         </div>
-        <div class="v1_40">
-            <p class="v1_41" style="line-height:1.5em;">Collabor-Action is a <b>search-engine and communication tool</b>
-                designed to
-                help unite Community Based Organizations and Nonprofits with healthcare organization in order to
-                provide the best healthcare services and resources to patients from all communities. <b>Organizations
-                    can search one another</b>, in order to help <b>establish good relationships</b> through <b>quality
-                    communication</b>
-                through our <b>collaboration request forum</b> to ultimately forge a reliable and supportive system!
-            </p><span class="v1_42">What is Collabor-Action?</span>
-        </div>
-        <div class="v1_43"></div>
-        <div class="v1_44">
-            <div class="v1_45"></div><span class="v1_46">Why was Collabor-Action Made?</span>
-            <ul class="v1_47" style="line-height:1.5em;">
-                <li>Our
-                    research indicated a <b>lack of reliable communication</b> between community based organizations and
-                    healthcare systems</li>
-                <li>That quality communications primarily occurs when there is already an establish relationship between
-                    healthcare systems and CBOs. However, many groups on either side of this relationships <b>have not
-                        developed these connections</b></li>
-                <li>That there are <b>“never-ending lack of resources,”</b> such as volunteers at healthcare systems
-                    that could
-                    strive in a positive direction with the help of CBOs</li>
-            </ul>
-        </div>
-        <div class="v1_58">
-            <p class="v1_59" style="line-height:1.5em;">If you want to add and <b>register</b> your organization to our
-                database or
-                <b>connect</b> your account to a company and show that you are a employee of a company, please click on
-                the
-                “register” button at the top right of screen
-            </p>
-            <div class="v1_61"></div>
-            <div class="v1_62"></div>
-        </div>
-        <div class="v1_55"><input class="v1_56" type="text" id="search" name="search" placeholder="Search...">
-            <div class="v1_57"></div>
-        </div>
-        <a href="./search.html">
-            <div class="view_orgs">
-                <p class="p_view">View all</p>
+        <div id="show_orgs"></div>
+        <div id="eliminate">
+            <div class="v1_40">
+                <p class="v1_41" style="line-height:1.5em;">Collabor-Action is a <b>search-engine and communication
+                        tool</b>
+                    designed to
+                    help unite Community Based Organizations and Nonprofits with healthcare organization in order to
+                    provide the best healthcare services and resources to patients from all communities.
+                    <b>Organizations
+                        can search one another</b>, in order to help <b>establish good relationships</b> through
+                    <b>quality
+                        communication</b>
+                    through our <b>collaboration request forum</b> to ultimately forge a reliable and supportive system!
+                </p><span class="v1_42">What is Collabor-Action?</span>
             </div>
-        </a>
-        <a href="./search.html">
-            <div class="search_orgs">
-                <p class="p_view">Search</p>
+            <div class="v1_43"></div>
+            <div class="v1_44">
+                <div class="v1_45"></div><span class="v1_46">Why was Collabor-Action Made?</span>
+                <ul class="v1_47" style="line-height:1.5em;">
+                    <li>Our
+                        research indicated a <b>lack of reliable communication</b> between community based organizations
+                        and
+                        healthcare systems</li>
+                    <li>That quality communications primarily occurs when there is already an establish relationship
+                        between
+                        healthcare systems and CBOs. However, many groups on either side of this relationships <b>have
+                            not
+                            developed these connections</b></li>
+                    <li>That there are <b>“never-ending lack of resources,”</b> such as volunteers at healthcare systems
+                        that could
+                        strive in a positive direction with the help of CBOs</li>
+                </ul>
             </div>
-        </a>
+            <div class="v1_58">
+                <p class="v1_59" style="line-height:1.5em;">If you want to add and <b>register</b> your organization to
+                    our
+                    database or
+                    <b>connect</b> your account to a company and show that you are a employee of a company, please click
+                    on
+                    the
+                    “register” button at the top right of screen
+                </p>
+                <div class="v1_61"></div>
+                <div class="v1_62"></div>
+            </div>
+            <div class="v1_55"><input class="v1_56" type="text" id="search_term" name="search" placeholder="Search...">
+                <div class="v1_57"></div>
+            </div>
+            <a href="./search.html">
+                <button class="view_orgs">
+                    <p class="p_view">View all</p>
+                </button>
+            </a>
+                <button class="search_orgs" onClick="searchTerm()">
+                    <p class="p_view">Search</p>
+                </button>
+        </div>
     </div>
 </body>
 
@@ -395,6 +404,7 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         overflow: hidden;
+        cursor: pointer;
     }
 
     .search_orgs {
@@ -410,6 +420,7 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         overflow: hidden;
+        cursor: pointer;
     }
 
     .p_view {
@@ -417,6 +428,8 @@
         font-size: 15px;
         color: white;
         font-family: auto;
+        position: relative;
+        top: -5px;
     }
 
     .user-p {

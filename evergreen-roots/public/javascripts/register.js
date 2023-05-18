@@ -76,3 +76,31 @@ async function searchTerm() {
     companyHtml += `</div>`
     document.getElementById("show_orgs").innerHTML = companyHtml;
 }
+
+async function init(){
+    await loadIdentity();
+}
+
+async function addEmployee(){
+    let type = document.querySelector('input[name="health_cbo_both"]:checked').value;
+    let group = document.getElementById("connect_group").value
+    let position = document.getElementById("position").value
+    let name = document.getElementById("your_name").value
+    let email = document.getElementById("connect_email").value
+
+    await fetchJSON("/api/employee", {
+        method: 'POST',
+        body: {type: type, 
+               group: group,
+               position: position,
+               name: name,
+               email: email}
+    })
+
+    document.getElementsByName("health_cbo_both").value = "";
+    document.getElementById("connect_group").value = "";
+    document.getElementById("position").value = "";
+    document.getElementById("your_name").value = "";
+    document.getElementById("connect_email").value = "";
+    returnHome()
+}

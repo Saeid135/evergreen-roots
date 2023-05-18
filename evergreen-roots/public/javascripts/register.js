@@ -2,6 +2,7 @@ async function init(){
     await loadIdentity();
 }
 
+
 async function addCompany(){
     let type = document.querySelector('input[name="health_cbo"]:checked').value;
     let name = document.getElementById("group").value
@@ -11,15 +12,18 @@ async function addCompany(){
     let about = document.getElementById("about").value
 
 
+
+
     await fetchJSON("/api/company", {
         method: 'POST',
-        body: {type: type, 
+        body: {type: type,
                name: name,
                address: address,
                number: number,
                email: email,
                about: about}
     })
+
 
     document.getElementsByName("health_cbo").value = "";
     document.getElementById("group").value = "";
@@ -30,53 +34,57 @@ async function addCompany(){
     returnHome()
 }
 
+
 async function returnHome(){
     location.replace("./index.html")
 }
+
 
 async function searchTerm() {
     document.getElementById("eliminate").style.display = "none";
     let orgName = document.getElementById("search_term").value;
     let companyJson = await fetchJSON(`api/company/search?name=${orgName}`)
+    let employeeJson = await fetchJSON(`api/employee/search?name=${orgName}`)
     let companyHtml = `
+    <div class="v3_107">
+        <div class="v3_108"></div>
+        <div class="v3_110">
+            <a href="./">
+                <div class="v3_111"></div>
+            </a>
             `
-    companyHtml += companyJson.map(companyInfo => {
+    companyHtml += employeeJson.map(employeeInfo => {
         let htmlCompanies = `
-        <div class="v3_107">
-            <div class="v3_108">
-                <span class="v3_109">${escapeHTML(companyInfo.name)}</span>
+            <span class="v3_112">Employees:</span>
+            <div class="v3_114">
+                <div class="v3_115"></div>
+                <div class="v3_116">
+                <p class="employee_detail"><b>Name:</b> ${escapeHTML(employeeInfo.name)}</p>
+                <p class="employee_detail"><b>Position:</b> ${escapeHTML(employeeInfo.position)}</p>
+                <p class="employee_detail"><b>Email:</b> ${escapeHTML(employeeInfo.email)}</p>                    
+                </div>
             </div>
-            <div class="v3_110">
-                <a href="./index.html">
-                    <div class="v3_111"></div>
-                </a>
-                <span class="v3_112">Employees:</span>
-                <div class="v3_114">
-                    <div class="v3_115"></div>
-                    <div class="v3_116">
-                    <p class=”employee_detail”><b>Name:</b> James Evan</p>
-                    <p class=”employee_detail”><b>Position:</b> Outreach Communications Lead</p>
-                    <p class=”employee_detail”><b>Email:</b> james.evan@uw.edu</p>                    
-                    </div>
-                </div>
-                <div class="v259_343">
-                    <div class="v259_344"></div>
-                    <span class="v259_345">Create Request Form</span>
-                </div>
-                <div class="v259_343">
+            <div class="v259_343">
                 <div class="v259_344"></div>
                 <span class="v259_345">Create Request Form</span>
-                </div>
-            </div>
-            <div class="v3_120"></div>
-            <div class="v3_121">
-                <p class="extra_detail"><b>Address:</b> ${escapeHTML(companyInfo.address)}</p>
-                <p class="extra_detail"><b>Email:</b> ${escapeHTML(companyInfo.email)}</p>
-                <p class="extra_detail"><b>Phone Number:</b> ${escapeHTML(companyInfo.number.toString())}</p>
-                <p class="extra_detail" style="line-height:2.5em;"><b>About:</b> ${escapeHTML(companyInfo.about)}
-                </p>
             </div>
         </div>
+        `
+        return htmlCompanies;
+    }).join("\n");
+
+
+    companyHtml += companyJson.map(companyInfo => {
+        let htmlCompanies = `
+        <div class="v3_120"></div>
+        <div class="v3_121">
+            <p class="extra_detail"><b>Address:</b> ${escapeHTML(companyInfo.address)}</p>
+            <p class="extra_detail"><b>Email:</b> ${escapeHTML(companyInfo.email)}</p>
+            <p class="extra_detail"><b>Phone Number:</b> ${escapeHTML(companyInfo.number.toString())}</p>
+            <p class="extra_detail" style="line-height:2.5em;"><b>About:</b> ${escapeHTML(companyInfo.about)}</p>
+        </div>
+        <span class="v3_109">${escapeHTML(companyInfo.name)}</span>
+    </div>
         `
         return htmlCompanies;
     }).join("\n");
@@ -84,9 +92,11 @@ async function searchTerm() {
     document.getElementById("show_orgs").innerHTML = companyHtml;
 }
 
+
 async function init(){
     await loadIdentity();
 }
+
 
 async function addEmployee(){
     let type = document.querySelector('input[name="health_cbo_both"]:checked').value;
@@ -95,14 +105,16 @@ async function addEmployee(){
     let name = document.getElementById("your_name").value
     let email = document.getElementById("connect_email").value
 
+
     await fetchJSON("/api/employee", {
         method: 'POST',
-        body: {type: type, 
+        body: {type: type,
                group: group,
                position: position,
                name: name,
                email: email}
     })
+
 
     document.getElementsByName("health_cbo_both").value = "";
     document.getElementById("connect_group").value = "";
@@ -111,3 +123,4 @@ async function addEmployee(){
     document.getElementById("connect_email").value = "";
     returnHome()
 }
+

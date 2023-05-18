@@ -15,7 +15,9 @@
     <div class="whole_page">
         <div class="navbar">
             <div id="identity_div">loading...</div>
-            <div class="logo"></div>
+            <a href="./">
+                <div class="logo"></div>
+            </a>
         </div>
         <div class="form-box">
             <div class="form"></div>
@@ -59,7 +61,9 @@
 
             <div class="form-img"></div>
             <div class="reg-box"></div>
-            <button class="reg-button" onClick = "addCompany()"></button><span class="reg-symbol">Register</span>
+            <button class="reg-button" onClick = "addCompany()">
+                <span class="reg-symbol">Register</span>
+            </button>
         </div>
     </div>
 </body>
@@ -122,6 +126,7 @@
     top: 3px;
     margin-left: 37%;
     overflow: hidden;
+    cursor: pointer;
     }
     .form-box {
     width: 446px;
@@ -466,13 +471,14 @@
     top: 514px;
     left: 300px;
     border: 3px solid rgba(46,167,255,1);
+    cursor: pointer;
     }
     .reg-symbol {
     width: 63px;
     color: rgba(255,255,255,1);
     position: absolute;
-    top: 520px;
-    left: 330px;
+    top: 3px;
+    left: 26px;
     font-family: Inter;
     font-weight: Regular;
     font-size: 16px;

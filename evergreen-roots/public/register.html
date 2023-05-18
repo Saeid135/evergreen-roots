@@ -51,8 +51,11 @@
             <div class="opt-1-box"><span class="opt-1">Community Based Organization (CBO)</span></div>
             <input class="opt-1-btn" type="radio" id="cbo" name="health_cbo" value="Community-based Org">
 
-            <div class="opt-2-box"><span class="opt-2">Healthcare Organization</span></div>
+            <div class="opt-2-box"><span class="opt-2">Healthcare Org</span></div>
             <input class="opt-2-btn" type="radio" id="health" name="health_cbo" value="Healthcare Org">
+
+            <div class="opt-3-box"><span class="opt-3">Both</span></div>
+            <input class="opt-3-btn" type="radio" id="both" name="health_cbo" value="Healthcare/Community Org">
 
             <div class="form-img"></div>
             <div class="reg-box"></div>
@@ -520,8 +523,8 @@
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 108px;
-    left: 260px;
+    top: 106px;
+    left: 232px;
     overflow: visible;
     }
     .opt-2 {
@@ -542,8 +545,43 @@
     background: rgba(255,255,255,1);
     opacity: 1;
     position: absolute;
-    top: 108px;
-    left: 255px;
+    top: 106px;
+    left: 227px;
+    border-radius: 50%;
+    }
+    .opt-3-box {
+    width: 200px;
+    height: 11px;
+    background: url("../images/opt-1-box.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 106px;
+    left: 366px;
+    overflow: visible;
+    }
+    .opt-3 {
+    width: 200px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+    }
+    .opt-3-btn {
+    width: 11px;
+    height: 10px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 106px;
+    left: 349px;
     border-radius: 50%;
     }
     .user-p {

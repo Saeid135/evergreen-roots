@@ -51,14 +51,21 @@ async function searchTerm() {
                     <div class="v3_111"></div>
                 </a>
                 <span class="v3_112">Employees:</span>
-                <span class="v3_113">Select
-                    employees you want to message/send a request form </span>
                 <div class="v3_114">
                     <div class="v3_115"></div>
-                    <span class="v3_116">Name: James Evans
-                        Job: Outreach Communications Lead
-                        Phone Number: 123-456-7890
-                        Email: james.evans@uw.edu</span>
+                    <div class="v3_116">
+                    <p class=”employee_detail”><b>Name:</b> James Evan</p>
+                    <p class=”employee_detail”><b>Position:</b> Outreach Communications Lead</p>
+                    <p class=”employee_detail”><b>Email:</b> james.evan@uw.edu</p>                    
+                    </div>
+                </div>
+                <div class="v259_343">
+                    <div class="v259_344"></div>
+                    <span class="v259_345">Create Request Form</span>
+                </div>
+                <div class="v259_343">
+                <div class="v259_344"></div>
+                <span class="v259_345">Create Request Form</span>
                 </div>
             </div>
             <div class="v3_120"></div>

@@ -27,7 +27,7 @@ async function loadMessages() {
     }
     else {
     let valueObtained = messageJson[0].name
-    let senderInfo = await fetchJSON(`api/employee/search?name=${valueObtained}`);
+    let senderInfo = await fetchJSON(`api/employee/search?username=${valueObtained}`);
     senderInfo = senderInfo[0];
     let messageHtml = ``
 

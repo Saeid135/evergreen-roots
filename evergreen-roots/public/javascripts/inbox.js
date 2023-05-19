@@ -40,7 +40,7 @@ async function loadMessages() {
             <div class="v1_1166">
                 <div class="v1_1167"></div><span class="v1_1168">${escapeHTML(messageInfo.employeeName)}</span><span class="v1_1169">${escapeHTML(messageInfo.employeeEmail)}</span>
             </div> 
-            <span class="v1_1173">Those who receive this request message </span>
+            <span class="v1_1173">Message request sent by:</span>
             <div class="v1_1174"><span class="v1_1175">${escapeHTML(messageInfo.employeeName)} Request Message To You and Other Employees of ${escapeHTML(messageInfo.company)}</span>
             <div class="v1_1176"><span class="v1_1177">${escapeHTML(messageInfo.message)}</span></div>
             <div class="v1_1178"></div><span class="v1_1179">${messageInfo.created_date}</span>

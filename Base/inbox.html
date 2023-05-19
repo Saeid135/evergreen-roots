@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        </head>
+        <body>
+            <!--NEED TO ADD RESPONSIVE NAVBAR FEATURES (HAMBURGER MENU)-->
+            <header>
+                <h3>Logo</h3>
+                <nav ref={navRef}>
+                    <li>
+                        <a href="./selectconnect.html">Register/Connect</a>
+                    </li>
+                    <li>
+                        Inbox
+                    </li>
+                    <li>
+                        Account
+                    </li>
+                    <button
+                        class="nav-btn nav-close-btn"
+                        onClick={showNavbar}>
+                        <!-- <FaTimes /> -->
+                    </button>
+                </nav>
+                <button
+                    class="nav-btn"
+                    onClick={showNavbar}>
+                    <!-- <FaBars /> -->
+                </button>
+            </header>
+            
+            <div class="container">
+                <div class="message-list">
+                    Here go the list of messages that the user was sent
+                </div>
+                <div class="message-view">
+                    <div class="message-card">
+                        <div class="message-read">
+                            <div class="title">
+                                <p>Use the BackEnd information to display the title <b>"INSERT NAME"'s Request Message To You and Other Employees of "INSERT ORGANIZATION NAME"</b></p>
+                            </div>
+                            <div class="message">
+                                <p>Here goes the actual message itself</p>
+                            </div>
+                        </div>
+                        <div class="message-recipients">
+                            <div>
+                                <p>Those who recieve this request message</p>
+                                <!-- // const db = getDatabase();
+                                // const courseRef = ref(db, "users/User: " + props.dataAddress);
+                                // let objArray = [];
+                            
+                                // onValue(courseRef, (snapshot) => {
+                                //     const changedValue = snapshot.val();
+                                //     const objKeys = Object.keys(changedValue);
+                            
+                                //     objArray = objKeys.map((keyString) => {
+                                //         const theObj = changedValue[keyString];
+                                //         return theObj;
+                                //     });
+                                // }); -->
+
+                                <!-- Need to alter code from different project to display contact cards of the people who recieved the message -->
+                            </div>
+                            <div class="button">
+                                <button>Create request response form</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </body>
+    </html> 
+
+    <br/>
+    <br/> 
+    
+    <style> 
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 0 2rem;
+            background-color: white;
+        }
+
+        nav li {
+            margin: 0 1rem;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        nav li:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: lightskyblue;
+        }
+
+        header .nav-btn {
+            padding: 5px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            outline: none;
+            visibility: hidden;
+            opacity: 0;
+            font-size: 1.8rem;
+        }
+
+        header div,
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        body {
+            background-color: #2FA8FF;
+            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .message-list, .message-view {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .message-list {
+            background-color: white;
+            width: 35%;
+        }
+
+        .message-card {
+            display: flex;
+            flex-direction: row;
+            height: 70%;
+            width: 80%;
+            margin-left: 7vw;
+            margin-top: 15vh;
+            border-radius: 20px;
+        }
+
+        .message-read, .message-recipients {
+            height: 100%;
+        }
+
+        .message-read {
+            width: 70%;
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .message {
+            display: flex;
+            height: 70%;
+            width: 90%;
+            margin-left: 2vw;
+            margin-top: 3vh;
+            border: 3px solid #2FA8FF;
+            border-radius: 20px;
+        }
+
+        .message-view p {
+            padding-top: 8px;
+            padding-left: 8px;
+        }
+
+        .message-recipients {
+            width: 30%;
+            background-color: #2FA8FF;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 150%;
+            cursor: pointer;
+        }
+
+    </style>

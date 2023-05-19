@@ -1,197 +1,416 @@
-<!DOCTYPE html>
-    <html>
-        <head>
-            <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-        </head>
-        <body>
-            <!--NEED TO ADD RESPONSIVE NAVBAR FEATURES (HAMBURGER MENU)-->
-            <header>
-                <h3>Logo</h3>
-                <nav ref={navRef}>
-                    <li>
-                        <a href="./selectconnect.html">Register/Connect</a>
-                    </li>
-                    <li>
-                        Inbox
-                    </li>
-                    <li>
-                        Account
-                    </li>
-                    <button
-                        class="nav-btn nav-close-btn"
-                        onClick={showNavbar}>
-                        <!-- <FaTimes /> -->
-                    </button>
-                </nav>
-                <button
-                    class="nav-btn"
-                    onClick={showNavbar}>
-                    <!-- <FaBars /> -->
-                </button>
-            </header>
-            
-            <div class="container">
-                <div class="message-list">
-                    Here go the list of messages that the user was sent
-                </div>
-                <div class="message-view">
-                    <div class="message-card">
-                        <div class="message-read">
-                            <div class="title">
-                                <p>Use the BackEnd information to display the title <b>"INSERT NAME"'s Request Message To You and Other Employees of "INSERT ORGANIZATION NAME"</b></p>
-                            </div>
-                            <div class="message">
-                                <p>Here goes the actual message itself</p>
-                            </div>
-                        </div>
-                        <div class="message-recipients">
-                            <div>
-                                <p>Those who recieve this request message</p>
-                                <!-- // const db = getDatabase();
-                                // const courseRef = ref(db, "users/User: " + props.dataAddress);
-                                // let objArray = [];
-                            
-                                // onValue(courseRef, (snapshot) => {
-                                //     const changedValue = snapshot.val();
-                                //     const objKeys = Object.keys(changedValue);
-                            
-                                //     objArray = objKeys.map((keyString) => {
-                                //         const theObj = changedValue[keyString];
-                                //         return theObj;
-                                //     });
-                                // }); -->
+<html>
 
-                                <!-- Need to alter code from different project to display contact cards of the people who recieved the message -->
-                            </div>
-                            <div class="button">
-                                <button>Create request response form</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </body>
-    </html> 
 
-    <br/>
-    <br/> 
-    
-    <style> 
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&amp;display=swap" rel="stylesheet">
+    <!-- <link href="./css/main.css" rel="stylesheet"> -->
+    <script src="javascripts/utils.js"></script>
+    <script src="javascripts/inbox.js"></script>
+    <script src="javascripts/identity.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <div class="whole_page">
+        <div class="navbar">
+            <div id="identity_div">loading...</div>
+            <a href="./">
+                <div class="home"></div>
+            </a>
+            <a href="./">
+                <div class="logo"></div>
+            </a>
+            <a href="./selectconnect.html">
+                <div class="reg-button"><span class="reg-symbol">Register/Connect</span></div>
+            </a>
+            <div class="logo"></div>
+        </div>
+        <div id="fill_info"></div>
+    </div>
+</body>
+
+</html>
+
+<br><br>
+<style>
     * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        box-sizing: border-box;
+    }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 80px;
-            padding: 0 2rem;
-            background-color: white;
-        }
+    body {
+        font-size: 14px;
+    }
 
-        nav li {
-            margin: 0 1rem;
-            text-decoration: none;
-            list-style-type: none;
-        }
+    .whole_page {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(104, 178, 240, 0.2), rgba(104, 178, 240, 0.2)), url("./img/background.png");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: auto;
+    }
 
-        nav li:hover {
-            cursor: pointer;
-            text-decoration: underline;
-            color: lightskyblue;
-        }
+    .navbar {
+        width: 100%;
+        min-height: 44px;
+        max-height: 70px;
+        height: 12%;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
 
-        header .nav-btn {
-            padding: 5px;
-            cursor: pointer;
-            background: transparent;
-            border: none;
-            outline: none;
-            visibility: hidden;
-            opacity: 0;
-            font-size: 1.8rem;
-        }
+    .user-image {
+        width: 44px;
+        height: 44px;
+        background: url(./img/profile-user.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 11px;
+        left: 93%;
+        overflow: hidden;
+    }
 
-        header div,
-        nav {
-            display: flex;
-            align-items: center;
-        }
+    .home {
+        width: 37px;
+        height: 37px;
+        background: url(../img/home.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 19%;
+        left: 2%;
+        overflow: hidden;
+    }
 
-        body {
-            background-color: #2FA8FF;
-            background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
-            background-size: 100% 100%;
-            background-attachment: fixed;
-        }
+    .logo {
+        width: 20vw;
+        height: 100%;
+        min-width: 190px;
+        background: url(./img/logo-removebg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 3px;
+        margin-left: 37%;
+        overflow: hidden;
+    }
 
-        .container {
-            display: flex;
-        }
+    .reg-symbol {
+        width: 63px;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 4px;
+        left: 11px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 16px;
+        opacity: 1;
+        text-align: left;
+    }
 
-        .message-list, .message-view {
-            height: 100vh;
-            width: 100%;
-        }
+    .reg-button {
+        width: 165px;
+        height: 35px;
+        background: rgba(46, 167, 255, 1);
+        opacity: 1;
+        position: absolute;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        top: 25%;
+        left: 73%;
+        border: 3px solid rgba(46, 167, 255, 1);
+    }
 
-        .message-list {
-            background-color: white;
-            width: 35%;
-        }
+    .v1_1165 {
+        width: 831px;
+        height: 530px;
+        background: rgba(46, 167, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 134px;
+        left: 381px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
 
-        .message-card {
-            display: flex;
-            flex-direction: row;
-            height: 70%;
-            width: 80%;
-            margin-left: 7vw;
-            margin-top: 15vh;
-            border-radius: 20px;
-        }
+    .v1_1166 {
+        width: 140px;
+        height: 125px;
+        background: rgba(255, 255, 255, 1);
+        padding: 9px 20px;
+        margin: 11px;
+        opacity: 1;
+        position: absolute;
+        top: 86px;
+        left: 594px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
 
-        .message-read, .message-recipients {
-            height: 100%;
-        }
+    .v1_1167 {
+        width: 55px;
+        height: 55px;
+        background: url(./img/employee.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 9px;
+        left: 43px;
+        overflow: hidden;
+    }
 
-        .message-read {
-            width: 70%;
-            background-color: white;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
+    .v1_1168 {
+        width: 100px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 75px;
+        left: 22px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: center;
+    }
 
-        .message {
-            display: flex;
-            height: 70%;
-            width: 90%;
-            margin-left: 2vw;
-            margin-top: 3vh;
-            border: 3px solid #2FA8FF;
-            border-radius: 20px;
-        }
+    .v1_1169 {
+        width: 100px;
+        color: rgba(46, 167, 255, 1);
+        position: absolute;
+        top: 94px;
+        left: 22px;
+        font-family: Inter;
+        font-weight: Semi Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: center;
+    }
 
-        .message-view p {
-            padding-top: 8px;
-            padding-left: 8px;
-        }
+    .v1_1173 {
+        width: 243px;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 45px;
+        left: 544px;
+        font-family: Inter;
+        font-weight: Extra Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: center;
+    }
 
-        .message-recipients {
-            width: 30%;
-            background-color: #2FA8FF;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
+    .v1_1174 {
+        width: 521px;
+        height: 529px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 0px;
+        overflow: hidden;
+    }
 
-        .button {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 150%;
-            cursor: pointer;
-        }
+    .v1_1175 {
+        width: 420px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 38px;
+        left: 29px;
+        font-family: Inter;
+        font-weight: Extra Bold;
+        font-size: 20px;
+        opacity: 1;
+        text-align: left;
+    }
 
-    </style>
+    .v1_1176 {
+        width: 440px;
+        height: 335px;
+        background: url(../images/v1_1176.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 145px;
+        left: 29px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+        border-style: solid;
+        border-color: deepskyblue;
+    }
+
+    .v1_1177 {
+        width: 423px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 10px;
+        left: 19px;
+        font-family: Inter;
+        font-weight: Extra Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .v1_1178 {
+        width: 28px;
+        height: 529px;
+        background: rgba(46, 167, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 695px;
+        overflow: hidden;
+    }
+
+    .v1_1179 {
+        width: 116px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 23px;
+        left: 550px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .v1_1129 {
+        width: 345px;
+        height: 684px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+
+    .v1_1130 {
+        width: 312px;
+        height: 59px;
+        background: rgba(46, 167, 255, 1);
+        padding: 9px 9px;
+        margin: 10px;
+        opacity: 1;
+        position: absolute;
+        top: 57px;
+        left: 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+    }
+
+    .v1_1131 {
+        width: 294px;
+        height: 41px;
+        background: rgba(255, 255, 255, 1);
+        padding: 13px 21px;
+        margin: 10px;
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow: hidden;
+    }
+
+    .v1_1132 {
+        width: 252px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 13px;
+        left: 21px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .v49_137 {
+        width: 198px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px;
+        left: 74px;
+        font-family: Inter;
+        font-weight: Extra Bold;
+        font-size: 20px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .user-p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 87.5%;
+        top: 10
+    }
+
+    .user-k {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 86.5%;
+        top: 10
+    }
+
+    .user-q {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 86%;
+        top: 40
+    }
+</style>

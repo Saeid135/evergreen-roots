@@ -15,6 +15,9 @@
     <div class="whole_page">
         <div class="navbar">
             <div id="identity_div">loading...</div>
+            <a href="./inbox.html">
+                <div class="inbox"></div>
+            </a>
             <a href="./">
                 <div class="logo"></div>
             </a>
@@ -24,7 +27,8 @@
             <div class="about">
                 <span class="about-title">About/Details about the Company </span>
                 <div class="about-textbox"></div>
-                <textarea class="about-text" type="text" id="about" name="about" placeholder="Type Here..." rows="7"></textarea>
+                <textarea class="about-text" type="text" id="about" name="about" placeholder="Type Here..."
+                    rows="7"></textarea>
             </div>
             <div class="name">
                 <span class="name-title">Name of your group?</span>
@@ -34,12 +38,12 @@
             <div class="address">
                 <span class="address-title">Address of the Building</span>
                 <div class="address-textbox"></div>
-                <input class="address-text" type="text" id="address" name="address" placeholder="Type Here...">            
+                <input class="address-text" type="text" id="address" name="address" placeholder="Type Here...">
             </div>
             <div class="phone">
                 <span class="phone-title">Phone Number of the Company</span>
                 <div class="phone-textbox"></div>
-                <input class="phone-text" type="text" id="phone" name="phone" placeholder="Type Here...">            
+                <input class="phone-text" type="text" id="phone" name="phone" placeholder="Type Here...">
             </div>
             <div class="email">
                 <span class="email-title">Email Address of the Company</span>
@@ -61,565 +65,622 @@
 
             <div class="form-img"></div>
             <div class="reg-box"></div>
-            <button class="reg-button" onClick = "addCompany()">
+            <button class="reg-button" onClick="addCompany()">
                 <span class="reg-symbol">Register</span>
             </button>
         </div>
     </div>
 </body>
+
 </html>
 
 <br><br>
 <style>
     * {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
+
     body {
-    font-size: 14px;
+        font-size: 14px;
     }
+
     .whole_page {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(104, 178, 240, 0.2),rgba(104, 178, 240, 0.2)), url("./img/background.png");
-    background-size: 100% 100%;
-    background-attachment: fixed;    
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: auto;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(104, 178, 240, 0.2), rgba(104, 178, 240, 0.2)), url("./img/background.png");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: auto;
     }
+
     .navbar {
-    width: 100%;
-    min-height: 44px;
-    max-height: 70px;
-    height: 12%;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
+        width: 100%;
+        min-height: 44px;
+        max-height: 70px;
+        height: 12%;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
     }
+
     .user-image {
-    width: 44px;
-    height: 44px;
-    background: url(./img/profile-user.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 11px;
-    left: 93%;
-    overflow: hidden;
+        width: 44px;
+        height: 44px;
+        background: url(./img/profile-user.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 11px;
+        left: 93%;
+        overflow: hidden;
     }
+
+    .inbox {
+        width: 37px;
+        height: 37px;
+        background: url(../img/inbox.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 19%;
+        left: 2%;
+        overflow: hidden;
+    }
+
     .logo {
-    width: 20vw;
-    height: 100%;
-    min-width: 190px;
-    background: url(./img/logo-removebg.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 3px;
-    margin-left: 37%;
-    overflow: hidden;
-    cursor: pointer;
+        width: 20vw;
+        height: 100%;
+        min-width: 190px;
+        background: url(./img/logo-removebg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 3px;
+        margin-left: 37%;
+        overflow: hidden;
+        cursor: pointer;
     }
+
     .form-box {
-    width: 446px;
-    height: 562px;
-    background: url("../images/v385_312.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    margin-top: 2%;
-    top: 10%;
-    left: 30%;
-    overflow: hidden;
+        width: 446px;
+        height: 562px;
+        background: url("../images/v385_312.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        margin-top: 2%;
+        top: 10%;
+        left: 30%;
+        overflow: hidden;
     }
+
     .form {
-    width: 446px;
-    height: 562px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    overflow: hidden;
+        width: 446px;
+        height: 562px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
     }
+
     .about {
-    width: 399px;
-    height: 140px;
-    background: url("../images/v385_314.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 365px;
-    left: 23px;
-    overflow: hidden;
+        width: 399px;
+        height: 140px;
+        background: url("../images/v385_314.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 365px;
+        left: 23px;
+        overflow: hidden;
     }
+
     .about-title {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 377px;
+        color: rgba(59, 71, 79, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .about-textbox {
-    width: 399px;
-    height: 121px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 19px;
-    left: 0px;
-    border: 2px solid rgba(46,167,255,1);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+        width: 399px;
+        height: 121px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 19px;
+        left: 0px;
+        border: 2px solid rgba(46, 167, 255, 1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
     }
+
     .about-text {
-    width: 384px;
-    height: 109px;
-    color: rgba(59,71,79,1);
-    position: absolute;
-    top: 26px;
-    left: 10px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    outline: none;
-    border: 0;
+        width: 384px;
+        height: 109px;
+        color: rgba(59, 71, 79, 1);
+        position: absolute;
+        top: 26px;
+        left: 10px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+        outline: none;
+        border: 0;
     }
+
     .name {
-    width: 399px;
-    height: 44px;
-    background: url("../images/name.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 145px;
-    left: 24px;
-    overflow: hidden;
+        width: 399px;
+        height: 44px;
+        background: url("../images/name.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 145px;
+        left: 24px;
+        overflow: hidden;
     }
+
     .name-title {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 377px;
+        color: rgba(59, 71, 79, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .name-textbox {
-    width: 399px;
-    height: 26px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 18px;
-    left: 0px;
-    border: 2px solid rgba(46,167,255,1);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+        width: 399px;
+        height: 26px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 18px;
+        left: 0px;
+        border: 2px solid rgba(46, 167, 255, 1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
     }
+
     .name-text {
-    width: 200px;
-    color: rgba(59,71,79,1);
-    position: absolute;
-    top: 23px;
-    left: 10px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    outline: none;
-    border: 0;
+        width: 200px;
+        color: rgba(59, 71, 79, 1);
+        position: absolute;
+        top: 23px;
+        left: 10px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+        outline: none;
+        border: 0;
     }
+
     .address {
-    width: 399px;
-    height: 44px;
-    background: url("../images/address.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 200px;
-    left: 24px;
-    overflow: hidden;
+        width: 399px;
+        height: 44px;
+        background: url("../images/address.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 200px;
+        left: 24px;
+        overflow: hidden;
     }
+
     .address-title {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 377px;
+        color: rgba(59, 71, 79, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .address-textbox {
-    width: 399px;
-    height: 26px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 18px;
-    left: 0px;
-    border: 2px solid rgba(46,167,255,1);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+        width: 399px;
+        height: 26px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 18px;
+        left: 0px;
+        border: 2px solid rgba(46, 167, 255, 1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
     }
+
     .address-text {
-    width: 200px;
-    color: rgba(59,71,79,1);
-    position: absolute;
-    top: 23px;
-    left: 10px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    outline: none;
-    border: 0;
+        width: 200px;
+        color: rgba(59, 71, 79, 1);
+        position: absolute;
+        top: 23px;
+        left: 10px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+        outline: none;
+        border: 0;
     }
+
     .phone {
-    width: 399px;
-    height: 44px;
-    background: url("../images/phone.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 255px;
-    left: 24px;
-    overflow: hidden;
+        width: 399px;
+        height: 44px;
+        background: url("../images/phone.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 255px;
+        left: 24px;
+        overflow: hidden;
     }
+
     .phone-title {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 377px;
+        color: rgba(59, 71, 79, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .phone-textbox {
-    width: 399px;
-    height: 26px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 18px;
-    left: 0px;
-    border: 2px solid rgba(46,167,255,1);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+        width: 399px;
+        height: 26px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 18px;
+        left: 0px;
+        border: 2px solid rgba(46, 167, 255, 1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
     }
+
     .phone-text {
-    width: 200px;
-    color: rgba(59,71,79,1);
-    position: absolute;
-    top: 24px;
-    left: 10px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    outline: none;
-    border: 0;
+        width: 200px;
+        color: rgba(59, 71, 79, 1);
+        position: absolute;
+        top: 24px;
+        left: 10px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+        outline: none;
+        border: 0;
     }
+
     .email {
-    width: 399px;
-    height: 44px;
-    background: url("../images/email.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 310px;
-    left: 24px;
-    overflow: hidden;
+        width: 399px;
+        height: 44px;
+        background: url("../images/email.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 310px;
+        left: 24px;
+        overflow: hidden;
     }
+
     .email-title {
-    width: 377px;
-    color: rgba(59,71,79,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 377px;
+        color: rgba(59, 71, 79, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .email-textbox {
-    width: 399px;
-    height: 26px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 18px;
-    left: 0px;
-    border: 2px solid rgba(46,167,255,1);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+        width: 399px;
+        height: 26px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 18px;
+        left: 0px;
+        border: 2px solid rgba(46, 167, 255, 1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
     }
+
     .email-text {
-    width: 200px;
-    color: rgba(59,71,79,1);
-    position: absolute;
-    top: 23px;
-    left: 10px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
-    outline: none;
-    border: 0;
+        width: 200px;
+        color: rgba(59, 71, 79, 1);
+        position: absolute;
+        top: 23px;
+        left: 10px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
+        outline: none;
+        border: 0;
     }
+
     .main-title {
-    width: 399px;
-    color: rgba(59,71,79,1);
-    position: absolute;
-    top: 70px;
-    left: 24px;
-    font-family: Inter;
-    font-weight: Bold;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 399px;
+        color: rgba(59, 71, 79, 1);
+        position: absolute;
+        top: 70px;
+        left: 24px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .form-img {
-    width: 45px;
-    height: 46px;
-    background: url(./img/edit-1.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 10px;
-    left: 205px;
-    overflow: hidden;
+        width: 45px;
+        height: 46px;
+        background: url(./img/edit-1.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        left: 205px;
+        overflow: hidden;
     }
+
     .reg-box {
-    width: 123px;
-    height: 31px;
-    background: rgba(46,167,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 514px;
-    left: 300px;
-    border: 3px solid rgba(46,167,255,1);
+        width: 123px;
+        height: 31px;
+        background: rgba(46, 167, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 514px;
+        left: 300px;
+        border: 3px solid rgba(46, 167, 255, 1);
     }
+
     .reg-button {
-    width: 123px;
-    height: 31px;
-    background: rgba(46,167,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 514px;
-    left: 300px;
-    border: 3px solid rgba(46,167,255,1);
-    cursor: pointer;
+        width: 123px;
+        height: 31px;
+        background: rgba(46, 167, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 514px;
+        left: 300px;
+        border: 3px solid rgba(46, 167, 255, 1);
+        cursor: pointer;
     }
+
     .reg-symbol {
-    width: 63px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 3px;
-    left: 26px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
+        width: 63px;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 3px;
+        left: 26px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 16px;
+        opacity: 1;
+        text-align: left;
     }
+
     .opt-1-box {
-    width: 200px;
-    height: 11px;
-    background: url("../images/opt-1-box.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 106px;
-    left: 37px;
-    overflow: visible;
+        width: 200px;
+        height: 11px;
+        background: url("../images/opt-1-box.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 106px;
+        left: 37px;
+        overflow: visible;
     }
+
     .opt-1 {
-    width: 200px;
-    color: rgba(0,0,0,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 200px;
+        color: rgba(0, 0, 0, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .opt-1-btn {
-    width: 11px;
-    height: 10px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 108px;
-    left: 21px;
-    border-radius: 50%;
+        width: 11px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 108px;
+        left: 21px;
+        border-radius: 50%;
     }
+
     .opt-2-box {
-    width: 154px;
-    height: 13px;
-    background: url("../images/opt-1-box.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 106px;
-    left: 232px;
-    overflow: visible;
+        width: 154px;
+        height: 13px;
+        background: url("../images/opt-1-box.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 106px;
+        left: 232px;
+        overflow: visible;
     }
+
     .opt-2 {
-    width: 141px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 0px;
-    left: 13px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 141px;
+        color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 0px;
+        left: 13px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .opt-2-btn {
-    width: 11px;
-    height: 10px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 106px;
-    left: 227px;
-    border-radius: 50%;
+        width: 11px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 106px;
+        left: 227px;
+        border-radius: 50%;
     }
+
     .opt-3-box {
-    width: 200px;
-    height: 11px;
-    background: url("../images/opt-1-box.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 106px;
-    left: 366px;
-    overflow: visible;
+        width: 200px;
+        height: 11px;
+        background: url("../images/opt-1-box.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 106px;
+        left: 366px;
+        overflow: visible;
     }
+
     .opt-3 {
-    width: 200px;
-    color: rgba(0,0,0,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
-    opacity: 1;
-    text-align: left;
+        width: 200px;
+        color: rgba(0, 0, 0, 1);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Inter;
+        font-weight: Regular;
+        font-size: 12px;
+        opacity: 1;
+        text-align: left;
     }
+
     .opt-3-btn {
-    width: 11px;
-    height: 10px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 106px;
-    left: 349px;
-    border-radius: 50%;
+        width: 11px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: absolute;
+        top: 106px;
+        left: 349px;
+        border-radius: 50%;
     }
+
     .user-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    position: absolute;
-    left: 87.5%;
-    top: 10px
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 87.5%;
+        top: 10px
     }
+
     .user-k {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    position: absolute;
-    left: 86%;
-    top: 10px
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 86%;
+        top: 10px
     }
+
     .user-q {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    position: absolute;
-    left: 86%;
-    top: 40px
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        position: absolute;
+        left: 86%;
+        top: 40px
     }
 </style>
-
-

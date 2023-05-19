@@ -22,4 +22,37 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.get('/search', async function (req, res) {
+    try {
+        let searchName = req.query.name
+        let findName = await req.models.Message.find({ employeeEmail: searchName })
+        let arrJson = []
+        let messageData = findName.map(async message => {
+            try {
+                let company = message.company
+                let employeeName = message.employeeName
+                let employeeEmail = message.employeeEmail
+                let name = message.username
+                let thismessage = message.message
+                let created_date = message.created_date
+                let jsonElement = {
+                    "company": company,
+                    "employeeName": "" + employeeName,
+                    "employeeEmail": "" + employeeEmail,
+                    "name": "" + name,
+                    "message": "" + thismessage,
+                    "created_date": created_date
+                }
+                arrJson.push(jsonElement)
+            } catch (error) {
+                console.log(error)
+                res.status(500).json({ "status": "error", "error": error })
+            }
+        })
+        res.send(arrJson)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ "status": "error", "error": error })
+    }
+})
 export default router;

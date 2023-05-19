@@ -28,6 +28,17 @@ async function main() {
 
     models.Employee = mongoose.model("Employee", employeeSchema)
 
+    const messageSchema = new mongoose.Schema({
+        company: String,
+        employeeName: String,
+        employeeEmail: String,
+        username: String,
+        message: String,
+        created_date: Date
+    })
+
+    models.Message = mongoose.model("Message", messageSchema)
+
     console.log("successfully created database model")
 }
 

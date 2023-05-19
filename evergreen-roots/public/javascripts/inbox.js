@@ -26,13 +26,16 @@ async function loadMessages() {
     document.getElementById("fill_info").innerHTML = messageHtml;
     }
     else {
+    let valueObtained = messageJson[0].name
+    let senderInfo = await fetchJSON(`api/employee/search?name=${valueObtained}`);
+    senderInfo = senderInfo[0];
     let messageHtml = ``
 
     messageHtml += messageJson.map(messageInfo => {
         let htmlMessage = `
         <div class="v1_1129">
             <div class="v1_1130">
-                <div class="v1_1131"><span class="v1_1132">${escapeHTML(messageInfo.employeeName)} of ${escapeHTML(messageInfo.company)}</span></div>
+                <div class="v1_1131"><span class="v1_1132">${escapeHTML(senderInfo.name)} of ${escapeHTML(senderInfo.group)}</span></div>
             </div>
             <span class="v49_137">RECENT MESSAGES</span>
         </div>
@@ -41,7 +44,7 @@ async function loadMessages() {
                 <div class="v1_1167"></div><span class="v1_1168">${escapeHTML(messageInfo.employeeName)}</span><span class="v1_1169">${escapeHTML(messageInfo.employeeEmail)}</span>
             </div> 
             <span class="v1_1173">Message request sent by:</span>
-            <div class="v1_1174"><span class="v1_1175">${escapeHTML(messageInfo.employeeName)} Request Message To You and Other Employees of ${escapeHTML(messageInfo.company)}</span>
+            <div class="v1_1174"><span class="v1_1175">${escapeHTML(senderInfo.name)} Sent a Message To You and Other Employees of ${escapeHTML(messageInfo.company)}</span>
             <div class="v1_1176"><span class="v1_1177">${escapeHTML(messageInfo.message)}</span></div>
             <div class="v1_1178"></div><span class="v1_1179">${messageInfo.created_date}</span>
         </div>

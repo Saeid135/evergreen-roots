@@ -12,7 +12,7 @@ const appSettings = {
         clientSecret:  "Zc_8Q~ryt5XSTM~v.dm1l0glu.OioGlQRgbr7aZ~"
     },	
     authRoutes: {
-        redirect: "https://collabor-action.azurewebsites.net/redirect",
+        redirect: "http://localhost:3000/redirect",
         error: "/error", 
         unauthorized: "/unauthorized" 
     } 

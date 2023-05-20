@@ -43,14 +43,6 @@ app.use(sessions({
     resave: false
 }))
 
-// app.get('/', (req, res, next) => {
-//     if(!req.session.isAuthenticated){
-//     res.redirect('/signin')
-//     } else{
-//         next();
-//     }
-// })
-
 app.use((req, res, next) => {
     req.models = models
     next()

@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 router.get('/search', async function (req, res) {
     try {
         let searchName = req.query.name
-        let findName = await req.models.Employee.find({ group: searchName })
+        let findName = await req.models.Employee.find({ email: searchName })
         let arrJson = []
         let employeeData = findName.map(async employee => {
             try {

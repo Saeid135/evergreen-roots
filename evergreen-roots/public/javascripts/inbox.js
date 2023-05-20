@@ -14,6 +14,8 @@ async function loadMessages() {
     let identityInfo = await fetchJSON(`api/users/myIdentity`);
     let username = identityInfo.userInfo.username;
     let messageJson = await fetchJSON(`api/message/search?name=${username}`);
+    let retreiveSender = await fetchJSON(`api/employee/search?name=${messageJson[0].name}`);
+    let senderInfo = retreiveSender[0];
     if (messageJson.length < 1) {
         let messageHtml = `
         <div class="v1_1129">
@@ -32,16 +34,16 @@ async function loadMessages() {
         let htmlMessage = `
         <div class="v1_1129">
             <div class="v1_1130">
-                <div class="v1_1131"><span class="v1_1132">${escapeHTML(messageInfo.employeeName)} of ${escapeHTML(messageInfo.company)}</span></div>
+                <div class="v1_1131"><span class="v1_1132">${escapeHTML(senderInfo.name)} of ${escapeHTML(senderInfo.group)}</span></div>
             </div>
             <span class="v49_137">RECENT MESSAGES</span>
         </div>
         <div class="v1_1165">
             <div class="v1_1166">
-                <div class="v1_1167"></div><span class="v1_1168">${escapeHTML(messageInfo.employeeName)}</span><span class="v1_1169">${escapeHTML(messageInfo.employeeEmail)}</span>
+                <div class="v1_1167"></div><span class="v1_1168">${escapeHTML(senderInfo.name)}</span><span class="v1_1169">${escapeHTML(senderInfo.position)}</span>
             </div> 
             <span class="v1_1173">Message request sent by:</span>
-            <div class="v1_1174"><span class="v1_1175">${escapeHTML(messageInfo.employeeName)} Request Message To You and Other Employees of ${escapeHTML(messageInfo.company)}</span>
+            <div class="v1_1174"><span class="v1_1175">${escapeHTML(senderInfo.name)} Sent a Request Message To You and Other Employees of ${escapeHTML(messageInfo.company)}</span>
             <div class="v1_1176"><span class="v1_1177">${escapeHTML(messageInfo.message)}</span></div>
             <div class="v1_1178"></div><span class="v1_1179">${messageInfo.created_date}</span>
         </div>

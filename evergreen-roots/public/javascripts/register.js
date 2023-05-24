@@ -59,7 +59,7 @@ async function searchTerm() {
     let orgName = document.getElementById("search_term").value;
     localStorage.setItem("orgName", orgName)
     let companyJson = await fetchJSON(`api/company/search?name=${orgName}`)
-    let employeeJson = await fetchJSON(`api/employee/search?name=${orgName}`)
+    let employeeJson = await fetchJSON(`api/employee/searchorg?name=${orgName}`)
     let companyHtml = `
     <div class="v3_107">
         <div class="v3_108"></div>
